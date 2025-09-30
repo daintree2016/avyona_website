@@ -1,6 +1,6 @@
 # Avyona - Single Product eCommerce Website
 
-Welcome to **Avyona**, a single-product eCommerce website built**. This repository serves as the collaborative base for our team to develop, enhance, and complete the website.
+Welcome to **Avyona**, a single-product eCommerce website built. This repository serves as the collaborative base for our team to develop, enhance, and complete the website.
 
 ---
 
