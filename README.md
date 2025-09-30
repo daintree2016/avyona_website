@@ -1,12 +1,12 @@
 # Avyona - Single Product eCommerce Website
 
-Welcome to **Avyona**, a single-product eCommerce website built. This repository serves as the collaborative base for our team to develop, enhance, and complete the website.
+Welcome to **Avyona**, a eCommerce website built. This repository serves as the collaborative base for our team to develop, enhance, and complete the website.
 
 ---
 
 ## 🌟 Project Overview
 
-- **Website Type:** Single-product eCommerce
+- **Website Type:** eCommerce
 - **Purpose:** Showcase a product with attractive UI/UX and smooth animations
 - **Features:**
   - Product display with images and descriptions
