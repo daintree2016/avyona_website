@@ -16,7 +16,7 @@ body{
 header{
     text-align: center;
     background-color:var(--head_bg) ;
-    padding: 15px;
+    padding: 0.8px;
     color: var(--head_font_color);
 }
 header p {
