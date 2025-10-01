@@ -1,0 +1,43 @@
+:root{
+    --font_color:#000000;
+    --head_bg:#9df3b86d;
+    --font_style:Poppins;
+    --logo_color:green;
+    --head_font_color:rgb(70, 129, 70);
+
+
+}
+
+body{
+    margin: 0;
+    color:var(--font_color);
+    font-family: var(--font_style);
+}
+header{
+    text-align: center;
+    background-color:var(--head_bg) ;
+    padding: 15px;
+    color: var(--head_font_color);
+}
+header p {
+  position: relative;
+  top: -80px;
+  opacity: 0; 
+  animation: revealText 0.9s ease-out forwards;
+}
+
+@keyframes revealText {
+
+   0% {
+    top: -80px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;       
+    opacity: 1; 
+  }
+}
+header span{
+    color: var(--logo_color);
+    font-weight: bolder;
+}
