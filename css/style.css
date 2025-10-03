@@ -1,159 +1,242 @@
-:root{
-    --font_color:#000000;
-    --head_bg:#9df3b86d;
-    --font_style:Poppins;
-    --logo_color:green;
-    --head_font_color:rgb(70, 129, 70);
-
-
+:root {
+    --font_color: #000000;
+    --head_bg: #9df3b86d;
+    --font_style: Poppins;
+    --logo_color: green;
+    --head_font_color: rgb(70, 129, 70);
 }
 
-body{
-    /* background-color: rgb(46, 46, 46); */
+body {
     margin: 0;
-    color:var(--font_color);
+    color: var(--font_color);
     font-family: var(--font_style);
 }
-header{
+
+/* Header */
+header {
     text-align: center;
-    background-color:var(--head_bg) ;
+    background-color: var(--head_bg);
     padding: 0.8px;
     color: var(--head_font_color);
 }
 header p {
-  position: relative;
-  top: -80px;
-  opacity: 0; 
-  animation: revealText 0.9s ease-out forwards;
-}
-
-@keyframes revealText {
-
-   0% {
+    position: relative;
     top: -80px;
     opacity: 0;
-  }
-  100% {
-    top: 0;       
-    opacity: 1; 
-  }
 }
-header span{
+header p.animate {
+    animation: revealText 0.9s ease-out forwards;
+}
+@keyframes revealText {
+    0% { top: -80px; opacity: 0; }
+    100% { top: 0; opacity: 1; }
+}
+header span {
     color: var(--logo_color);
     font-weight: bolder;
 }
 
+/* Main Banner */
 .main_banner {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
 }
-
-
-.text_content {
-  position: absolute;
-  top: 50%; 
-  left: -200px;
-  transform: translateY(-50%);
-  color: rgb(24, 28, 24);
-  z-index: 3;
-  opacity: 0;
-  animation: textslide 1s ease forwards;
-  animation-delay: 3s; 
-}
-
 
 .image_banner {
-  position: relative;
-  width: 100%;
-  background-color: var(--head_bg);
-  /* background-color: rgb(116, 255, 112); */
-
-  padding-left: 2px;
-  height: 100%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--head_bg);
 }
-
 .image_banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
-
+/* Reveal mask for banner */
 .reveal_mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  z-index: 2;
-  animation: curtain 2s ease forwards;
-  animation-delay: 1.5s; 
-}
-
-@keyframes curtain {
-  0% {
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
-  }
-  100% {
-    left: 100%;
-    width: 0;
-  }
+    height: 100%;
+    background: white;
+    z-index: 2;
+}
+.reveal_mask.animate {
+    animation: curtain 2s ease forwards;
+    animation-delay:2s;
+}
+@keyframes curtain {
+    0% { left: 0; width: 100%; }
+    100% { left: 100%; width: 0; }
 }
 
-@keyframes textslide {
-  0% {
+/* Banner Text */
+.text_content {
+    position: absolute;
+    top: 50%;
     left: -200px;
+    transform: translateY(-50%);
+    color: rgb(24, 28, 24);
+    z-index: 3;
     opacity: 0;
-  }
-  100% {
-    left: 20px;
-    opacity: 1;
-  }
+    
+}
+.text_content.animate {
+    animation: textslide 1s ease forwards;
+    animation-delay:3s;
+}
+@keyframes textslide {
+    0% { left: -200px; opacity: 0; }
+    100% { left: 20px; opacity: 1; }
+}
+.text_content button {
+    background-color: black;
+    border: none;
+    border-radius: 0.3rem;
+    height: 50px;
+    width: 120px;
+    color: white;
 }
 
-.text_content button{
-  background-color:black;
-  border: none;
-  border-radius: 0.3rem;
-  height: 50px;
-  width: 120px;
-  color: white;
-}
+/* Tags Section */
 .tags_sec {
-  display: flex;
-  justify-self: center; 
-  width: fit-content; 
-  margin-bottom: 5rem; 
-  padding-bottom: 25px;
-  padding-top: 25px;
-  border-bottom: 2px solid gray; 
-  box-sizing: border-box; 
+    display: flex;
+    justify-self: center;
+    width: fit-content;
+    margin: 5rem auto;
+    padding: 25px 0;
+    border-bottom: 2px solid gray;
+    box-sizing: border-box;
 }
-
 .tags_sec ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem; 
-  padding: 0;
-  margin: 0;
-  color: gray;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    color: gray;
 }
-
 .tags_sec ul li {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+#tag {
+    border: 0;
+    margin: 0;
+    align-items: center;
 }
 
-#tag {
-  border: 0;
-  margin: 0;
-  align-items: center;
+/* Favorites Section */
+.fav_sec {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto 5rem auto;
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+.fav_img_sec {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.fav_img_sec img {
+    width: 400px;
+    height: 500px;
+    background-color: gray;
+}
+.fav_sec p, .fav_sec h4 {
+    margin: 0.5rem 0;
+}
+
+/* Advertisement Banners */
+.adv_banners {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem auto;
+    max-width: 1000px;
+}
+
+/* Left: Image Reveal */
+.adv_img {
+    position: relative;
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+}
+.adv_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+.adv_img .reveal_mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 2;
+}
+.adv_img .reveal_mask.animate {
+    animation: reveal 2s ease forwards;
+}
+@keyframes reveal {
+    0% { left: 0; width: 100%; }
+    100% { left: 100%; width: 0; }
+}
+
+/* Right: Text Slider */
+.adv_text_content {
+    width: 50%;
+    position: relative;
+}
+.text_slide {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.6s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.text_slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+.adv_text_content p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: #333;
+}
+
+/* Dots */
+.dots {
+    margin-top: 2rem;
+    display: flex;
+    gap: 10px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.dot.active {
+    background: #333;
 }
