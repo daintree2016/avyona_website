@@ -17,6 +17,10 @@
     gap: 1.3rem;
 }
 
+.head_main nav div li{
+    cursor: pointer;
+}
+
 .head_main nav hr {
   margin: 0;
   border: none;
@@ -67,7 +71,8 @@
 }
 
 .our_pro_card {
-    background-color: #3e5e3b;
+    background-color: #c3e3c0;
+    z-index: 1;
     height: 500px;
     width: 600px;
     border-radius: 0.8rem;
