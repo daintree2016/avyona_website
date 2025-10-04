@@ -1,0 +1,60 @@
+
+.footer-section {
+  /* background-color: #ff0000; */
+  margin: 5rem 0 5rem 0;
+  padding: 5rem 0 5rem 0;
+  padding: 4rem 2rem;
+  width: 85%;
+  justify-self: center;
+  font-family: Arial, sans-serif;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.footer-grid {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  justify-self: center;
+  gap: 2rem;
+}
+.footer-right{
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-left p {
+    width: 450px;
+}
+
+.footer-left.animate{
+    opacity: 0;
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.6s;
+}
+.footer-menu.animate {
+    opacity: 0;
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.8s;
+}
+.footer-right hr.animate{
+    opacity: 0;
+  animation: slide_left 2s ease forwards;
+  animation-delay: 1s;
+}
+.footer-subscription.animate{
+     opacity: 0;
+  animation: slide_left 2s ease forwards;
+  animation-delay: 1.2s;
+}
+
+
+.footer-logo-image { width: 150px; }
+.social-links a i {color: rgb(127, 223, 127); }
+.footer-menu h4 { margin-bottom: 0.5rem; }
+.footer-menu a { display: block; margin-bottom: 0.3rem; text-decoration: none; color: gray; }
+.footer-menu a:hover { color: green; }
+.footer-subscription form { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+.footer-subscription input[type="text"] { padding: 0.5rem; flex: 1; }
+.footer-subscription input[type="submit"] { padding: 0.5rem 1rem; background-color: green; color: #fff; border: none; cursor: pointer; }
+.footer-bottom { margin-top: 2rem; text-align: center; font-size: 0.9rem; color: green; }

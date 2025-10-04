@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/header.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nova+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 </head>
 <body>
     <header>
-        <p id="header-text">Get Free Shipping Worldwide with this code <span>AVYONA</span></p>
+        <p id="header-text" class="header_text">Get Free Shipping Worldwide with this code <span>AVYONA</span></p>
     </header>
     <div id="header_sec"></div>
     <div class="main_banner">
@@ -89,6 +90,8 @@
 
     </div>
 
+
+    <h1 class="insta_heading">Gallery on Instagram</h1>
   <div class="insta_gallary">
     <div class="insta_gallary1">
         <img src="https://m.media-amazon.com/images/I/615with4VxL.jpg" style="width: 100%;"/>
@@ -108,13 +111,58 @@
         </div>
     </div>
   </div>
-<div class="fav_sec">
-        <p>BLOGS</p>
+
+    <div class="fav_sec2">
+        <p id="blg_heading">BLOGS</p>
         <h1>See Our Latest Article</h1>
         <div class="fav_img_sec2"></div>
     </div>
 
-    
+    <div class="bottom_tags_sec">
+        <ul>
+            <li id="b_tag">
+                <i class="fa-solid fa-award"></i>
+                <p><strong>2 YEAR WARRANTY</strong><br>Enjoy peace of mind with our 2-year warranty.</p>
+            </li>
+
+            <li id="b_tag">
+                <i class="fa-solid fa-tag"></i>
+                <p><strong>DISCOUNT FOR MEMBERS</strong><br>Join our loyalty program to unlock exclusive discounts.</p>
+            </li>
+
+            <li id="b_tag">
+                <i class="fa-solid fa-shield-halved"></i>
+                <p><strong>SECURE PAYMENT</strong><br>Your transactions are protected with advanced SSL encryption.</p>
+            </li>
+
+            <li id="b_tag">
+                <i class="fa-solid fa-earth-americas"></i>
+                <p><strong>WORLDWIDE SHIPPING</strong><br>We deliver to over 150 countries with reliable.</p>
+            </li>
+
+            <li id="b_tag">
+                <i class="fa-solid fa-shop"></i>
+                <p><strong>HIGH QUALITY MATERIAL</strong><br>Each product is crafted from premium.</p>
+            </li>
+            </ul>
+
+    </div>
+
+    <div class="cts">
+        <div class="cts_text">
+            <h1>Have something on your mind?<br>Reach out today and we’ll get back to you as soon as possible</h1>
+            <button>Contact Us</button>
+        </div>
+        <div class="cts_img">
+            <img src="https://cdn.thewirecutter.com/wp-content/media/2025/05/BEST-DIGITAL-PHOTO-FRAME-0579.jpg?auto=webp&quality=75&width=1024"/>
+        </div>
+    </div>
+
+
+    <div id="footer-section" class="footer-section">
+        
+    </div>
+
 
     
 
@@ -123,95 +171,34 @@
 </body>
 </html>
 <script>
-    function getheader(){
-        fetch('header.html')
-        .then(response=>response.text())
-        .then(data=>{
-            document.getElementById('header_sec').innerHTML=data;
-        })
-    }
-    document.addEventListener("DOMContentLoaded", getheader);
+function getheader(){
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header_sec').innerHTML = data;
 
-    // get text tranasiton
-    window.addEventListener("load", () => {
-          document.getElementById("header-text").style.transform = "translateY(0)";
-    document.getElementById("header-text").style.opacity = "1";
-    });
+        const headerText = document.getElementById("header-text");
+        if(headerText){
+            headerText.style.transform = "translateY(0)";
+            headerText.style.opacity = "1";
+        }
 
-   const fav_sec = document.querySelector('.fav_img_sec')
-   const fav_sec2 = document.querySelector('.fav_img_sec2')
+        observeElements(); 
+    })
+    .catch(err => console.error("Error loading header:", err));
+}
 
-    const fav_data = []
+function getfooter(){
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        const footer = document.querySelector('.footer-section');
+        footer.innerHTML = data;
+        observeElements(); 
+    })
+    .catch(err => console.error("Error loading footer:", err));
+}
 
-    function getfavs() {
-        fetch('fav.json')
-            .then(response => response.json()) 
-            .then(data => {
-                console.log("This is:", data); 
-                fav_data.push(data)   
-                console.log("fav_data", fav_data)
-
-                showFavs()
-                showFavs2()
-            })
-            .catch(error => {
-                console.error("Error fetching favs:", error);
-            });
-    }
-
-    function showFavs() {
-        fav_data.forEach(obj => {
-            Object.entries(obj).forEach(([key, value]) => {
-                console.log("--", key, value)
-                fav_sec.innerHTML+=`
-                <div class="fav_sub">
-                    <img src=${value['img']} alt="fav1"/>
-                    <h5>${value['title']}</h5>
-                    <p>${value['Price']}</p>
-                </div>  
-                `
-            })
-
-        })
-    }
-
-    function showFavs2() {
-        fav_data.forEach(obj => {
-            Object.entries(obj).forEach(([key, value]) => {
-                console.log("--", key, value)
-                fav_sec2.innerHTML+=`
-                <div class="fav_sub">
-                    <img src=${value['img']} alt="fav1"/>
-                    <h5>${value['title']}</h5>
-                    <p>${value['Price']}</p>
-                </div>  
-                `
-            })
-
-        })
-    }
-
-
-
-     const dots = document.querySelectorAll(".dot");
-  const slides = document.querySelectorAll(".text_slide");
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      // remove active from all
-      slides.forEach(s => s.classList.remove("active"));
-      dots.forEach(d => d.classList.remove("active"));
-
-      // add active to clicked one
-      slides[index].classList.add("active");
-      dots[index].classList.add("active");
-    });
-  });
-
-getfavs()
-
-
-const revealElements = document.querySelectorAll('.reveal_mask, .reveal_mask2, .text_content, .text_slide');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -220,8 +207,91 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);    
     }
   });
-}, { threshold: 0.2 }); 
+}, { threshold: 0.2 });
 
-revealElements.forEach(el => observer.observe(el));
+function observeElements(){
+    const revealElements = document.querySelectorAll(
+        '.reveal_mask, .reveal_mask2, .text_content, .text_slide, .bottom_tags_sec ul li, .footer-section *'
+    );
+    revealElements.forEach(el => observer.observe(el));
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    getheader();
+    getfooter(); // now load footer as well
+});
+
+
+const fav_sec = document.querySelector('.fav_img_sec');
+const fav_sec2 = document.querySelector('.fav_img_sec2');
+
+const fav_data = [];
+const blog_data = [];
+
+function getfavs() {
+    fetch('fav.json')
+        .then(response => response.json()) 
+        .then(data => {
+            fav_data.push(data);
+            showFavs();
+        })
+        .catch(error => console.error("Error fetching favs:", error));
+    
+    fetch('blog.json')
+    .then(response => response.json()) 
+    .then(data => {
+        blog_data.push(data);
+        showblog();
+    })
+    .catch(error => console.error("Error fetching blogs:", error));
+}
+
+function showFavs() {
+    fav_data.forEach(obj => {
+        Object.entries(obj).forEach(([key, value]) => {
+            fav_sec.innerHTML += `
+            <div class="fav_sub">
+                <img src=${value['img']} alt="fav1"/>
+                <h5>${value['title']}</h5>
+                <p>${value['Price']}</p>
+            </div>  
+            `;
+        })
+    })
+}
+
+function showblog() {
+    blog_data.forEach(obj => {
+        Object.entries(obj).forEach(([key, value]) => {
+            fav_sec2.innerHTML += `
+            <div class="blog_sub">
+                <img src=${value['img']} alt="fav1"/>
+                <h5>${value['title']}</h5>
+                <div style="display:flex;justify-content:space-between">
+                    <p>${value['sub_head']}</p>
+                    <p>${value['time']}</p>
+                </div>
+            </div>  
+            `;
+        })
+    })
+}
+
+// Slider dots
+const dots = document.querySelectorAll(".dot");
+const slides = document.querySelectorAll(".text_slide");
+
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        slides.forEach(s => s.classList.remove("active"));
+        dots.forEach(d => d.classList.remove("active"));
+
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+    });
+});
+
+getfavs();
 
 </script>

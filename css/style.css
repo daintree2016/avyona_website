@@ -6,6 +6,7 @@
     --head_font_color: rgb(70, 129, 70);
 }
 
+
 body {
     margin: 0;
     color: var(--font_color);
@@ -18,15 +19,15 @@ header {
     background-color: var(--head_bg);
     padding: 0.8px;
     color: var(--head_font_color);
+    /* color: black; */
 }
-header p {
+.header_text {
     position: relative;
     top: -80px;
     opacity: 0;
-}
-header p.animate {
     animation: revealText 0.9s ease-out forwards;
 }
+
 @keyframes revealText {
     0% { top: -80px; opacity: 0; }
     100% { top: 0; opacity: 1; }
@@ -91,7 +92,7 @@ header span {
 }
 .text_content.animate {
     animation: textslide 1s ease forwards;
-    animation-delay:3s;
+    animation-delay:1.5s;
 }
 @keyframes textslide {
     0% { left: -200px; opacity: 0; }
@@ -153,10 +154,17 @@ header span {
 .fav_img_sec img, .fav_img_sec2 img {
     width: 400px;
     height: 500px;
-    background-color: gray;
+    /* background-color: gray; */
 }
-.fav_sec p, .fav_sec h4 {
+.fav_sec p, .fav_sec h4, .fav_sec2 h1{
     margin: 0.5rem 0;
+}
+.insta_heading {
+    margin: 9rem 7rem  1rem 7rem;
+}
+
+#blg_heading {
+    margin-top: 8rem;
 }
 
 /* Advertisement Banners */
@@ -192,7 +200,7 @@ header span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: gray;
+    background: rgb(255, 255, 255);
     z-index: 2;
 }
 .adv_img .reveal_mask2.animate {
@@ -271,4 +279,180 @@ header span {
 }
 .sub_insta{
   background-color: rgb(255, 255, 255);
+}
+
+.blog_sub:hover img {
+  transition: transform 0.4s ease-in;
+  transform: scale(1.05); /* zooms in by 20% */
+  cursor: pointer;
+}
+
+.bottom_tags_sec {
+  display: flex;
+  justify-self: center;
+  width: fit-content;
+  margin: 5rem ;
+  padding: 55px;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  box-sizing: border-box;
+}
+
+.bottom_tags_sec ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem; /* smaller gap looks cleaner */
+  padding: 0;
+  margin: 0;
+  color: gray;
+}
+
+.bottom_tags_sec ul li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#b_tag {
+  border: 0;
+  margin: 0;
+  align-items: center;
+}
+
+/* make icon circular and centered */
+#b_tag i {
+  background-color: black;
+  color: white; /* icon visible */
+  width: 90px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* initial state */
+.bottom_tags_sec ul li {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+/* animated states with staggered delays */
+.bottom_tags_sec ul li:nth-child(1).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.2s;
+}
+.bottom_tags_sec ul li:nth-child(2).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.4s;
+}
+.bottom_tags_sec ul li:nth-child(3).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.6s;
+}
+.bottom_tags_sec ul li:nth-child(4).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.8s;
+}
+.bottom_tags_sec ul li:nth-child(5).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 1s;
+}
+
+/* keyframes for smooth slide-in from left */
+@keyframes slide_left {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.cts{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: center;
+    gap: 2rem;
+    width: 80%;
+}
+.cts button{
+    background-color: black;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 150px;
+}
+
+.cts_text h1{
+    width: 100%;
+}
+
+.cts_img img{
+    width: 100%;
+}
+
+/* .footer-menu ul li:nth-child(1).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.2s;
+}
+.footer-menu ul li:nth-child(2).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.4s;
+}
+.footer-menu ul li:nth-child(3).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.6s;
+} */
+
+
+
+
+
+/* scalling */
+
+
+@media (max-width: 991px) {
+
+    .tags_sec, .tags_sec ul, .bottom_tags_sec ul, .footer-right, .footer-section, .footer-grid,.insta_gallary{
+        flex-direction: column;
+    }    
+    .fav_img_sec, .fav_img_sec2 {
+        justify-content:center;
+    }
+    #b_tag i{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    }
+
+    
+}
+
+/* 
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+} */
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  
+}
+
+
+@media (min-width: 1400px) {
+    
 }

@@ -17,7 +17,15 @@
     display: flex;
     gap: 1.3rem;
 }
-
+.hamburger{
+    display: none;
+}
+.hamburger nav{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
 .head_main nav div li{
     cursor: pointer;
 }
@@ -74,7 +82,7 @@
 
 .our_pro_card {
     background-color: #c3e3c0;
-    z-index: 3;
+    z-index: 4;
     height: 500px;
     width: 600px;
     border-radius: 0.8rem;
@@ -94,3 +102,44 @@
     pointer-events: auto; 
 }
 
+/* scalling */
+
+
+@media (max-width: 991px) {
+    .head_main{
+        display: grid;
+        grid-template-columns: auto auto;
+        height: 50px;
+
+    }
+    .head_main nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
+
+/* @media (min-width: 481px) and (max-width: 767px) {
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+} */
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  
+}
+
+
+@media (min-width: 1400px) {
+    
+}
