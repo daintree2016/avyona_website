@@ -1,3 +1,7 @@
+body {
+    font-family:Poppins;
+}
+
 
 /* header*/
 .head_main{
@@ -408,22 +412,22 @@
 .footer-left.animate{
     opacity: 0;
   animation: slide_left 2s ease forwards;
-  animation-delay: 0.6s;
+  animation-delay: 6s;
 }
 .footer-menu.animate {
     opacity: 0;
   animation: slide_left 2s ease forwards;
-  animation-delay: 0.8s;
+  animation-delay: 8s;
 }
 .footer-right hr.animate{
     opacity: 0;
   animation: slide_left 2s ease forwards;
-  animation-delay: 1s;
+  animation-delay: 10s;
 }
 .footer-subscription.animate{
      opacity: 0;
   animation: slide_left 2s ease forwards;
-  animation-delay: 1.2s;
+  animation-delay: 12s;
 }
 
 
@@ -435,5 +439,4 @@
 .footer-subscription form { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
 .footer-subscription input[type="text"] { padding: 0.5rem; flex: 1; }
 .footer-subscription input[type="submit"] { padding: 0.5rem 1rem; background-color: green; color: #fff; border: none; cursor: pointer; }
-.footer-bottom { margin-top: 2rem; text-align: center; font-size: 0.9rem; color: green; 
-}
+.footer-bottom { margin-top: 2rem; text-align: center; font-size: 0.9rem; color: green; }
