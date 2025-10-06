@@ -286,7 +286,98 @@ body {
     display: block;
   }
 }
+/* Dream Section */
+/*above feedback*/
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background: #f6f0ec;
+  position: relative;
+  overflow: hidden;
+}
+.content {
+  flex: 1;
+  padding: 20px;
+}
+.content h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #5a3f32;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.content button {
+  background: #5a3f32;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.content button:hover {
+  background: #3e2c22;
+}
+.image {
+  flex: 1;
+}
+.adv_img {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+}
+.adv_img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.adv_img .reveal_mask2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  z-index: 2;
+}
+.adv_img .reveal_mask2.animate {
+  animation: reveal 2s ease forwards;
+  animation-delay: 0.2s;
+}
 
+/*  Animations  */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes reveal {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
 
 /*footer*/
 
@@ -321,22 +412,22 @@ body {
 .footer-left.animate{
     opacity: 0;
   animation: slide_left 2s ease forwards;
-  animation-delay: 6s;
+  animation-delay: 0.6s;
 }
 .footer-menu.animate {
     opacity: 0;
   animation: slide_left 2s ease forwards;
-  animation-delay: 8s;
+  animation-delay: 0.8s;
 }
 .footer-right hr.animate{
     opacity: 0;
   animation: slide_left 2s ease forwards;
-  animation-delay: 10s;
+  animation-delay: 1s;
 }
 .footer-subscription.animate{
      opacity: 0;
   animation: slide_left 2s ease forwards;
-  animation-delay: 12s;
+  animation-delay: 1.2s;
 }
 
 
@@ -348,4 +439,5 @@ body {
 .footer-subscription form { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
 .footer-subscription input[type="text"] { padding: 0.5rem; flex: 1; }
 .footer-subscription input[type="submit"] { padding: 0.5rem 1rem; background-color: green; color: #fff; border: none; cursor: pointer; }
-.footer-bottom { margin-top: 2rem; text-align: center; font-size: 0.9rem; color: green; }
+.footer-bottom { margin-top: 2rem; text-align: center; font-size: 0.9rem; color: green; 
+}
