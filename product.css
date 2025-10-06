@@ -5,6 +5,7 @@ body {
   padding: 20px;
   background: #f9f9f9;
 }
+/* header*/
 .head_main{
     background-color: rgb(255, 255, 255);
     padding: 15px;
@@ -386,6 +387,7 @@ body {
 }
 
 /* Dream Section */
+/*above feedback*/
 .section {
   display: flex;
   justify-content: space-between;
@@ -494,150 +496,6 @@ body {
 }
 .animate-visible.slide-in-right {
   animation: slideRight 1s ease forwards;
-}
-.head_main{
-    background-color: rgb(255, 255, 255);
-    padding: 15px;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    gap: 18rem; 
-    border-bottom: 1px solid var(--logo_color);
-
-}
-.head_main img{
-    height: 24px;
-}
-
-.head_main nav{
-    list-style-type: none;
-    display: flex;
-    gap: 1.3rem;
-}
-.hamburger{
-    display: none;
-}
-.hamburger nav{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.3rem;
-}
-.head_main nav div li{
-    cursor: pointer;
-}
-
-.head_main nav hr {
-  margin: 0;
-  border: none;
-  border-top: 1px solid #000;
-  width: 100%;
-  transform: scaleX(0);  
-  transform-origin: left;     
-  transition: transform 0.9s ease;
-}
-
-.head_main nav div:hover hr {
-  transform: scaleX(1);        
-}
-
-.others{
-    display: flex;
-    gap: 3rem;
-    margin-top: -1rem;
-}
-.others i{
-    margin-top: 1.3rem;
-}
-.cart_icon_sec{
-    display: flex;
-    gap: 0.5rem;
-}
-#down_arrow{
-    margin-top: 0.2rem;
-    font-size:1.1rem;
-    transition: transform 0.9s ease; 
-    
-}
-
-
-.product-container:hover #down_arrow {
-  transform: rotate(180deg); 
-  
-}
-.cart_icon_sec p:last-child{
-    background-color: #000;
-    color: white;
-    width: 25px;
-    text-align: center;
-    border-radius: 0.3rem;
-}
-.product-container {
-    position: relative;
-    top: 5px;
-}
-
-.our_pro_card {
-    background-color: #c3e3c0;
-    z-index: 4;
-    height: 500px;
-    width: 600px;
-    border-radius: 0.8rem;
-    position: absolute;
-    top: 120%;          
-    left: 0;
-    opacity: 0;         
-    transform: translateY(30px); 
-    transition: opacity 0.6s ease, transform 0.6s ease; 
-    pointer-events: none; 
-}
-
-.product-container:hover .our_pro_card {
-    opacity: 1;   
-    transform: translateY(0);
-    cursor: pointer;
-    pointer-events: auto; 
-}
-
-/* scalling */
-
-
-@media (max-width: 991px) {
-    .head_main{
-        display: grid;
-        grid-template-columns: auto auto;
-        height: 50px;
-
-    }
-    .head_main nav{
-        display: none;
-    }
-    .hamburger{
-        display: block;
-    }
-}
-
-
-/* @media (min-width: 481px) and (max-width: 767px) {
-}
-
-
-@media (min-width: 768px) and (max-width: 991px) {
-
-} */
-
-
-@media (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-
-@media (min-width: 1200px) and (max-width: 1399px) {
-  
-}
-
-
-@media (min-width: 1400px) {
 }
 
 .footer-section {
