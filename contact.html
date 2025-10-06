@@ -98,7 +98,7 @@ const observer = new IntersectionObserver((entries) => {
 
 function observeElements(){
     const revealElements = document.querySelectorAll(
-        '.reveal_mask, .footer-section'
+        '.reveal_mask, .footer-section *'
     );
     revealElements.forEach(el => observer.observe(el));
 }
@@ -109,4 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     getfooter();
 });
 
+  window.addEventListener("load", function() {
+    document.querySelector(".reveal_mask").classList.add("animate");
+  });
 </script>
