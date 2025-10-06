@@ -1,6 +1,6 @@
 :root {
     --font_color: #000000;
-    --head_bg: #9df3b86d;
+    --head_bg: #9df3b8;
     --font_style: Poppins;
     --logo_color: green;
     --head_font_color: rgb(70, 129, 70);
@@ -137,7 +137,7 @@ header span {
 }
 
 /* Favorites Section */
-.fav_sec, .fav_sec2 {
+.fav_sec{
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -145,7 +145,11 @@ header span {
     padding: 25px 0;
     box-sizing: border-box;
 }
-.fav_img_sec, .fav_img_sec2  {
+.fav_sec2{
+    justify-self:center;
+}
+
+.fav_img_sec, .fav_img_sec2 {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
@@ -156,9 +160,11 @@ header span {
     height: 500px;
     /* background-color: gray; */
 }
-.fav_sec p, .fav_sec h4, .fav_sec2 h1{
+.fav_sec p, .fav_sec h4{
     margin: 0.5rem 0;
 }
+
+
 .insta_heading {
     margin: 9rem 7rem  1rem 7rem;
 }
@@ -428,8 +434,12 @@ header span {
     background-color: rgb(255, 255, 255);
     color: black;
     }
-
-    
+    .fav_sec2{
+        /* margin-top: 52rem; */
+    }
+    .fav_sec2 p, .fav_sec2 h1{
+        margin-left: 5rem;
+    }
 }
 
 /* 
