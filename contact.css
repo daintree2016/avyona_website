@@ -1,3 +1,38 @@
+/*nav */
+:root {
+    --font_color: #000000;
+    --head_bg: #9df3b8;
+    --font_style: Poppins;
+    --logo_color: green;
+    --head_font_color: rgb(70, 129, 70);
+}
+
+/* header banner*/
+header {
+    text-align: center;
+    background-color: var(--head_bg);
+    padding: 0.8px;
+    color: var(--head_font_color);
+    
+    /* color: black; */
+}
+.header_text {
+    position: relative;
+    top: -80px;
+    opacity: 0;
+    animation: revealText 0.9s ease-out forwards;
+    
+}
+
+@keyframes revealText {
+    0% { top: -80px; opacity: 0; }
+    100% { top: 0; opacity: 1; }
+}
+header span {
+    color: var(--logo_color);
+    font-weight: bolder;
+}
+
 body {
     font-family:Poppins;
 }
