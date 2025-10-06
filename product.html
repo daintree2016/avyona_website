@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Product Page</title>
-  <link rel="stylesheet" href="product.css">
-  <link rel='stylesheet' type='text/css' media='screen' href='css/header.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>productpage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href='product.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/header.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nova+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  
+  <header>
+        <p id="header-text" class="header_text">Get Free Shipping Worldwide with this code <span>AVYONA</span></p>
+    </header>
 <div class="head_main">
     <img src="images/avyona logo.png" alt="avyona logo"/>
     <nav>
@@ -53,13 +59,13 @@
     <div class="image-section slide-in-left">
       <div class="adv_img">
         <img id="mainImage" 
-             src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQQiduHjuH6GMyLFOUES2fOmAFsComt0_tiEMC22jKL4TILw5k2ZHVFWknxkw0CQQr1SOhrO7kWr6ZSuWNRhXp_DhjNwk7C4T-NCb2wl9re" 
+             src="images/wv1.png" 
              alt="Product" 
              class="main-image">
         <div class="reveal_mask2 animate"></div>
       </div>
       <div class="thumbnail-container">
-        <img src="images/a 2.png" alt="Thumb 1" class="thumb">
+        <img src="images/h 1.png" alt="Thumb 1" class="thumb">
         <img src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/wedding4_square.jpg" alt="Thumb 2" class="thumb">
         <img src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/wedding4_square.jpg" alt="Thumb 3" class="thumb">
       </div>
@@ -200,7 +206,7 @@
 
 
 
-<div class="footer-container">
+<div class="footer-container" >
 
             <div class="footer-grid">
 
@@ -287,6 +293,9 @@
     }, { threshold: 0.1 });
 
     animatedElements.forEach(el => observer.observe(el));
+    
+
+    
   </script>
 </body>
 </html>
