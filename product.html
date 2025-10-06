@@ -237,6 +237,14 @@
         }
       });
     }, { threshold: 0.1 });
+    const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('animate'); 
+      observer.unobserve(entry.target);    
+    }
+  });
+}, { threshold: 0.2 });
 
     animatedElements.forEach(el => observer.observe(el));
     
@@ -269,16 +277,6 @@ function getfooter(){
     .catch(err => console.error("Error loading footer:", err));
 }
 
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('animate'); 
-      observer.unobserve(entry.target);    
-    }
-  });
-}, { threshold: 0.2 });
-
 function observeElements(){
     const revealElements = document.querySelectorAll(
         '.reveal_mask, .reveal_mask2, .text_content, .text_slide, .bottom_tags_sec ul li, .footer-section *'
@@ -296,3 +294,6 @@ document.addEventListener("DOMContentLoaded", () => {
   </script>
 </body>
 </html>
+
+
+
