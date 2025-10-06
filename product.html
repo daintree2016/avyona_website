@@ -11,7 +11,9 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <script src="https://kit.fontawesome.com/8b2d9a60c0.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nova+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
 <body>
   <header>
         <p id="header-text" class="header_text">Get Free Shipping Worldwide with this code <span>AVYONA</span></p>
@@ -238,6 +240,57 @@
 
     animatedElements.forEach(el => observer.observe(el));
     
+
+    function getheader(){
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header_sec').innerHTML = data;
+
+        const headerText = document.getElementById("header-text");
+        if(headerText){
+            headerText.style.transform = "translateY(0)";
+            headerText.style.opacity = "1";
+        }
+
+        observeElements(); 
+    })
+    .catch(err => console.error("Error loading header:", err));
+}
+
+function getfooter(){
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        const footer = document.querySelector('.footer-section');
+        footer.innerHTML = data;
+        observeElements(); 
+    })
+    .catch(err => console.error("Error loading footer:", err));
+}
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('animate'); 
+      observer.unobserve(entry.target);    
+    }
+  });
+}, { threshold: 0.2 });
+
+function observeElements(){
+    const revealElements = document.querySelectorAll(
+        '.reveal_mask, .reveal_mask2, .text_content, .text_slide, .bottom_tags_sec ul li, .footer-section *'
+    );
+    revealElements.forEach(el => observer.observe(el));
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    getheader();
+    getfooter();
+});
 
     
   </script>
