@@ -63,14 +63,15 @@ body {
   object-fit: cover;
   border: 1px solid #ddd;
   margin-bottom: 10px;
+  padding-left: 70px;
 }
 .thumbnail-container {
   display: flex;
   gap: 10px;
 }
 .thumbnail-container img {
-  width: 70px;
-  height: 70px;
+  width: 140px;
+  height: 120px;
   border-radius: 5px;
   cursor: pointer;
   border: 2px solid transparent;
@@ -261,6 +262,7 @@ body {
   border: 0;
   margin: 0;
   align-items: center;
+  background-color: #000000;
 }
 
 /* make icon circular and centered */
@@ -355,7 +357,7 @@ body {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  width: 60%;
+  width: 40%;
 }
 .adv_img img {
   display: block;
