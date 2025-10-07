@@ -33,6 +33,7 @@
         <img src="images/h 1.png" alt="Thumb 1" class="thumb">
         <img src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/wedding4_square.jpg" alt="Thumb 2" class="thumb">
         <img src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/wedding4_square.jpg" alt="Thumb 3" class="thumb">
+        <img src="images/wv1.png" class="thumb">
       </div>
     </div>
     <div class="details-section slide-in-right">
@@ -207,6 +208,31 @@
     
     
 
+    /* products click */
+    // Thumbnail to main image change with smooth animation
+const thumbnails = document.querySelectorAll('.thumb');
+const mainImage = document.getElementById('mainImage');
+
+thumbnails.forEach((thumb) => {
+  thumb.addEventListener('click', () => {
+    // Add fade-out animation
+    mainImage.classList.add('fade-out');
+
+    setTimeout(() => {
+      // Change main image after fade-out
+      mainImage.src = thumb.src;
+
+      // Add fade-in effect
+      mainImage.classList.remove('fade-out');
+      mainImage.classList.add('fade-in-image');
+
+      // Remove fade-in after animation completes
+      setTimeout(() => {
+        mainImage.classList.remove('fade-in-image');
+      }, 400);
+    }, 300);
+  });
+});
 
 
   function getheader(){
