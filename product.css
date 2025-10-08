@@ -570,5 +570,53 @@ input[type="number"] {
 
 
 
+/*product information*/
+.product-info-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-info-section h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 1.5rem;
+}
+
+.product-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-info-table td {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.product-info-table td:first-child {
+  font-weight: bold;
+  width: 40%;
+  color: #444;
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 600px) {
+  .product-info-section {
+    padding: 0.5rem;
+  }
+
+  .product-info-table td {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .product-info-section h2 {
+    font-size: 1.4rem;
+  }
+}
 
 
