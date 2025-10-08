@@ -12,77 +12,166 @@
   <script src="https://kit.fontawesome.com/8b2d9a60c0.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nova+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .contact-us-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 60px;
+      max-width: 1200px;
+      margin: auto;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-us-info {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .contact-us-info h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .contact-us-info p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .contact-us-info .location,
+    .contact-us-info .hours {
+      margin-top: 30px;
+    }
+
+    .contact-us-info .location h3,
+    .contact-us-info .hours h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .contact-us-info .location p,
+    .contact-us-info .hours p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .contact-us-map {
+      flex: 1;
+      height: 350px;
+    }
+
+    .contact-us-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .contact-us-section {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .contact-us-info {
+        padding-right: 0;
+        margin-bottom: 40px;
+      }
+
+      .contact-us-map {
+        height: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <p id="header-text" class="header_text">Get Free Shipping Worldwide with this code <span>AVYONA</span></p>
-    </header>
-    <div id="header_sec"></div>
-  <div class="container">
-    <div class="contact">
-      <h4>OUR CONTACT</h4>
-      <h2>Get in touch with our friendly team.</h2>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Pai Man">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="paiman@gmail.com">
-        <label for="message">Message</label>
-        <textarea id="message" rows="4" placeholder="Example Text"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    <div class="contact_img">
-      <img src="images/b v1.png" alt="Contact Image">
-      <div class="reveal_mask"></div>
-    </div>
+<header>
+  <p id="header-text" class="header_text">Get Free Shipping Worldwide with this code <span>AVYONA</span></p>
+</header>
+
+<div id="header_sec"></div>
+
+<div class="container">
+  <div class="contact">
+    <h4>OUR CONTACT</h4>
+    <h2>Get in touch with our friendly team.</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Pai Man">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="paiman@gmail.com">
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Example Text"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="contact_img">
+    <img src="images/b v1.png" alt="Contact Image">
+    <div class="reveal_mask"></div>
+  </div>
 </div>
-  <section class="section fade-in">
-    <div class="content">
-      <h2>As digital media continues to evolve<br>
-          to evolve in modern <br>
-          in touch with us!</h2>
-      <button>Contact Us</button>
-    </div>
-    <div class="image adv_img">
-      <img src="images/wv1.png" alt="Furniture Lamp">
-      <div class="reveal_mask2 animate"></div>
-    </div>
-    </section>
+
+<!-- ✅ New Contact Us with Map Section -->
+<div class="contact-us-section">
+  <div class="contact-us-info">
+    <h1>Contact Us</h1>
+    <p>Reach out to us for inquiries about our minimalist audio and video accessories designed for modern living and immersive technology experiences.</p>
     
-    <div id="footer-section" class="footer-section"> </div>
-      <script>
+    <div class="location">
+      <h3>Location</h3>
+      <p>B Block Asian Suncity Complex, Kothaguda, <br>Hyderabad, Telangana 500084, India</p>
+    </div>
+
+    <div class="hours">
+      <h3>Hours</h3>
+      <p>Mon–Fri 9am–5pm</p>
+    </div>
+  </div>
+
+  <div class="contact-us-map">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0475171684063!2d78.36762157498761!3d17.456859801151456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93962f5a61e9%3A0xf8f0f67dcb01c8d!2sAsian%20Suncity%20Complex!5e0!3m2!1sen!2sin!4v1691234567890!5m2!1sen!2sin" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
 
 
-  function getheader(){
-    fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('header_sec').innerHTML = data;
+<div id="footer-section" class="footer-section"> </div>
 
-        const headerText = document.getElementById("header-text");
-        if(headerText){
-            headerText.style.transform = "translateY(0)";
-            headerText.style.opacity = "1";
-        }
-
-        observeElements(); 
-    })
-    .catch(err => console.error("Error loading header:", err));
+<script>
+function getheader(){
+  fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById('header_sec').innerHTML = data;
+      const headerText = document.getElementById("header-text");
+      if(headerText){
+          headerText.style.transform = "translateY(0)";
+          headerText.style.opacity = "1";
+      }
+      observeElements(); 
+  })
+  .catch(err => console.error("Error loading header:", err));
 }
 
 function getfooter(){
-    fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-        const footer = document.querySelector('.footer-section');
-        footer.innerHTML = data;
-        observeElements(); 
-    })
-    .catch(err => console.error("Error loading footer:", err));
+  fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+      const footer = document.querySelector('.footer-section');
+      footer.innerHTML = data;
+      observeElements(); 
+  })
+  .catch(err => console.error("Error loading footer:", err));
 }
-
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -94,21 +183,21 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 function observeElements(){
-    const revealElements = document.querySelectorAll(
-        '.reveal_mask, .reveal_mask2, .text_content, .text_slide, .bottom_tags_sec ul li, .footer-section *'
-    );
-    revealElements.forEach(el => observer.observe(el));
+  const revealElements = document.querySelectorAll(
+    '.reveal_mask, .reveal_mask2, .text_content, .text_slide, .bottom_tags_sec ul li, .footer-section *'
+  );
+  revealElements.forEach(el => observer.observe(el));
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
-    getheader();
-    getfooter();
+  getheader();
+  getfooter();
 });
 
-  window.addEventListener("load", function() {
-    document.querySelector(".reveal_mask").classList.add("animate");
-  });
+window.addEventListener("load", function() {
+  document.querySelector(".reveal_mask").classList.add("animate");
+});
 </script>
+
 </body>
 </html>
