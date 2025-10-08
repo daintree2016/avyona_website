@@ -41,20 +41,7 @@ header span {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* Base Styles */
-
-
 
 /* Wrapper to increase horizontal spacing */
 .section-container {
@@ -65,11 +52,9 @@ header span {
 /* Main Container */
 .product-page {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  width: 2000px;
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
   gap: 1rem;
   background: #fafafa;
   border-radius: 8px;
@@ -84,7 +69,6 @@ header span {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 /* Image Side */
@@ -99,11 +83,7 @@ header span {
   transition: opacity 0.4s ease;
 }
 
-
-
-
-
-
+/*thumbnails*/
 .thumbnails {
   display: flex;
   margin-top: 1rem;
@@ -241,9 +221,6 @@ input[type="number"] {
     max-width: 100%;
   }
 }
-
-
-
 /*description section*/
 .description-section {
   width: 100%;
@@ -294,12 +271,13 @@ input[type="number"] {
   max-width: 100%;
   text-align: left;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; text-align: center;
 }
 
 .image-wrapper {
   overflow: hidden;
   border-radius: 8px;
+ 
 }
 
 .image-wrapper img {
@@ -343,22 +321,19 @@ input[type="number"] {
     flex: 1 1 100%;
   }
 }
-
-
-
 /*faqs*/
-.faq-section-container {
-  background-color: #f5e3c3; /* light biscuit color */
+.faq-section-container { /* light biscuit color */
   padding: 3rem 2rem;
   font-family: Arial, sans-serif;
 }
 
 .faq-grid {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  background-color: lightgray;
 }
 
 .faq-heading-block {
@@ -370,11 +345,13 @@ input[type="number"] {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #333;
+  padding: 15px;
 }
 
 .faq-heading-block p {
   font-size: 1rem;
   color: #666;
+  padding: 15px;
 }
 
 .faq-items-block {
@@ -425,94 +402,171 @@ input[type="number"] {
   margin-top: 0.5rem;
   line-height: 1.6;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .faq-grid {
-    flex-direction: column;
-  }
-
-  .faq-heading-block,
-  .faq-items-block {
-    flex: 1 1 100%;
-  }
-}
-
-
-
 /*contact us*/
-.section {
+.contact-cta-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
-  background: #f6f0ec;
-  position: relative;
-  overflow: hidden;
+  background-color: #f5eeea;
+  padding: 40px 30px; /* Reduced height */
+  margin: 40px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-.content {
+
+.contact-cta-content {
   flex: 1;
-  padding: 20px;
+  min-width: 280px;
 }
-.content h2 {
-  font-size: 32px;
-  font-weight: 500;
-  color: #5a3f32;
-  margin-bottom: 20px;
-  line-height: 1.4;
+
+.contact-cta-content h2 {
+  font-size: 22px;
+  color: #5c4532;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
-.content button {
-  background: #5a3f32;
+
+.contact-cta-content button {
+  background-color: #5c4532;
   color: #fff;
   border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
   border-radius: 4px;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.content button:hover {
-  background: #3e2c22;
+
+.contact-cta-content button:hover {
+  background-color: #3e2f24;
 }
-.image {
+
+.contact-cta-image {
   flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.adv_img {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
+
+.contact-cta-image img {
   width: 100%;
-}
-.adv_img img {
-  display: block;
-  width: 100%;
+  max-width: 400px;
   height: auto;
+  object-fit: contain;
+  border-radius: 6px;
 }
-.adv_img .reveal_mask2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: gray;
-  z-index: 2;
+/*that icon section before contact*/
+.bottom_tags_sec {
+  display: flex;
+  justify-self: center;
+  width: fit-content;
+  margin: 5rem ;
+  padding: 55px;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  box-sizing: border-box;
 }
-.adv_img .reveal_mask2.animate {
-  animation: reveal 2s ease forwards;
+
+.bottom_tags_sec ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem; /* smaller gap looks cleaner */
+  padding: 0;
+  margin: 0;
+  color: gray;
+}
+
+.bottom_tags_sec ul li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#b_tag {
+  border: 0;
+  margin: 0;
+  align-items: center;
+}
+
+/* make icon circular and centered */
+#b_tag i {
+  background-color: black;
+  color: white; /* icon visible */
+  width: 90px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* initial state */
+.bottom_tags_sec ul li {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+/* animated states with staggered delays */
+.bottom_tags_sec ul li:nth-child(1).animate {
+  animation: slide_left 2s ease forwards;
   animation-delay: 0.2s;
 }
+.bottom_tags_sec ul li:nth-child(2).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.4s;
+}
+.bottom_tags_sec ul li:nth-child(3).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.6s;
+}
+.bottom_tags_sec ul li:nth-child(4).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.8s;
+}
+.bottom_tags_sec ul li:nth-child(5).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 1s;
+}
+@media (max-width: 991px) {
 
+    .tags_sec, .tags_sec ul, .bottom_tags_sec ul, .footer-right, .footer-section, .footer-grid,.insta_gallary{
+        flex-direction: column;
+    }    
+    .fav_img_sec, .fav_img_sec2 {
+        justify-content:center;
+    }
+    #b_tag i{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    }
+    .fav_sec2{
+        /* margin-top: 52rem; */
+    }
+    .fav_sec2 p, .fav_sec2 h1{
+        margin-left: 5rem;
+    }
+}
 
+/* 
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
 
+} */
+@media (min-width: 992px) and (max-width: 1199px) {
 
-
-
-
-
-
-
-
-
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  
+}
+@media (min-width: 1400px) {
+    
+}
 
 
 
