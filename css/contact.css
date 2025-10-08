@@ -1,0 +1,179 @@
+/*nav */
+:root {
+    --font_color: #000000;
+    --head_bg: #9df3b8;
+    --font_style: Poppins;
+    --logo_color: green;
+    --head_font_color: rgb(70, 129, 70);
+}
+
+/* header banner*/
+header {
+    text-align: center;
+    background-color: var(--head_bg);
+    padding: 0.8px;
+    color: var(--head_font_color);
+    
+    /* color: black; */
+}
+.header_text {
+    position: relative;
+    top: -80px;
+    opacity: 0;
+    animation: revealText 0.9s ease-out forwards;
+    
+}
+
+@keyframes revealText {
+    0% { top: -80px; opacity: 0; }
+    100% { top: 0; opacity: 1; }
+}
+header span {
+    color: var(--logo_color);
+    font-weight: bolder;
+}
+
+body {
+    font-family:Poppins;
+}
+
+
+/* Hamburger menu hidden */
+.hamburger {
+  display: none;
+}
+
+/* CONTACT SECTION */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  background: #f5ebe6;
+  margin: 60px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* LEFT FORM */
+.contact {
+  flex: 1;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8a6d5c;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #3d2f26;
+  margin-bottom: 40px;
+  line-height: 1.3;
+  max-width: 400px;
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3d2f26;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #bba899;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.contact textarea {
+  resize: none;
+}
+
+.contact button {
+  background: #5a463a;
+  color: #fff;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease;
+  width: 110px;
+}
+
+.contact button:hover {
+  background: #3d2f26;
+}
+
+/* RIGHT IMAGE */
+.contact_img {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* REVEAL ANIMATION */
+.contact_img .reveal_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #8a6d5c;
+  z-index: 2;
+}
+
+.contact_img .reveal_mask.animate {
+  animation: reveal 1.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes reveal {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .contact, .contact_img {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+  .contact {
+    padding: 50px 30px;
+  }
+  .head_main nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+/* Dream Section */
+/*above feedback*/
