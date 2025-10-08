@@ -1,0 +1,622 @@
+ /*na*/
+ :root {
+    --font_color: #000000;
+    --head_bg: #9df3b8;
+    --font_style: Poppins;
+    --logo_color: green;
+    --head_font_color: rgb(70, 129, 70);
+}
+
+/* header banner*/
+header {
+    text-align: center;
+    background-color: var(--head_bg);
+    padding: 0.8px;
+    color: var(--head_font_color);
+    
+    /* color: black; */
+}
+.header_text {
+    position: relative;
+    top: -90px;
+    opacity: 0;
+    animation: revealText 0.9s ease-out forwards;
+    
+}
+
+
+@keyframes revealText {
+    0% { top: -80px; opacity: 0; }
+    100% { top: 0; opacity: 1; }
+}
+header span {
+    color: var(--logo_color);
+    font-weight: bolder;
+}
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+
+/* Base Styles */
+
+/* Wrapper to increase horizontal spacing */
+.section-container {
+  padding: 0.5rem; /* ✅ Adjust side spacing here */
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.product-page {
+  display: flex;
+  width: 2000px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+  background: #fafafa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Equal width sections */
+.left-side,
+.right-side,
+.third-side {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image Side */
+.left-side {
+  position: relative;
+}
+
+.left-side img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: opacity 0.4s ease;
+}
+
+/*thumbnails*/
+.thumbnails {
+  display: flex;
+  margin-top: 1rem;
+  gap: 10px;
+  justify-content: center;
+}
+
+.thumbnails img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.thumbnails img:hover {
+  border-color: #333;
+}
+
+/* Product Info */
+.right-side h2 {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #b76e79;
+  margin: 1rem 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 250px;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.add-to-cart,
+.buy-now {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-to-cart {
+  background: #ddd;
+}
+
+.buy-now {
+  background: #b76e79;
+  color: white;
+}
+
+.payment-options img {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+/* Accordion Section */
+.accordion {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2rem;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+  max-height: 300px;
+  margin-top: 10px;
+}
+
+.accordion-header {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.accordion-content ul {
+  padding-left: 1.2rem;
+}
+
+.accordion-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Reveal Animation */
+
+
+@keyframes reveal {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-page {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side,
+  .third-side {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .right-side {
+    align-items: center;
+    text-align: center;
+  }
+
+  .accordion {
+    max-width: 100%;
+  }
+}
+/*description section*/
+.description-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto; /* space above and below */
+  padding: 0 2rem; /* same as .product-page internal padding */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.description-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.description-section p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+
+/*you might like*/
+.suggested-products {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.suggested-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #5a4535; /* Optional to match your tone */
+}
+
+.product-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  flex: 1 1 30%;
+  max-width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease; text-align: center;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+ 
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #5a4535;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Entrance Animation */
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    flex: 1 1 100%;
+  }
+}
+/*faqs*/
+.faq-section-container { /* light biscuit color */
+  padding: 3rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.faq-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: lightgray;
+}
+
+.faq-heading-block {
+  flex: 1 1 30%;
+  min-width: 250px;
+}
+
+.faq-heading-block h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  padding: 15px;
+}
+
+.faq-heading-block p {
+  font-size: 1rem;
+  color: #666;
+  padding: 15px;
+}
+
+.faq-items-block {
+  flex: 1 1 65%;
+}
+
+.faq-item {
+  border-bottom: 1px solid #d6c4a8;
+  padding: 1rem 0;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5c4328;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  color: #a35f35;
+}
+
+.faq-question .icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  font-size: 0.95rem;
+  color: #444;
+  padding-right: 1rem;
+}
+
+.faq-answer p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+/*contact us*/
+.contact-cta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5eeea;
+  padding: 40px 30px; /* Reduced height */
+  margin: 40px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-cta-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-cta-content h2 {
+  font-size: 22px;
+  color: #5c4532;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contact-cta-content button {
+  background-color: #5c4532;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-cta-content button:hover {
+  background-color: #3e2f24;
+}
+
+.contact-cta-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-cta-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+/*that icon section before contact*/
+.bottom_tags_sec {
+  display: flex;
+  justify-self: center;
+  width: fit-content;
+  margin: 5rem ;
+  padding: 55px;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  box-sizing: border-box;
+}
+
+.bottom_tags_sec ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem; /* smaller gap looks cleaner */
+  padding: 0;
+  margin: 0;
+  color: gray;
+}
+
+.bottom_tags_sec ul li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#b_tag {
+  border: 0;
+  margin: 0;
+  align-items: center;
+}
+
+/* make icon circular and centered */
+#b_tag i {
+  background-color: black;
+  color: white; /* icon visible */
+  width: 90px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* initial state */
+.bottom_tags_sec ul li {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+/* animated states with staggered delays */
+.bottom_tags_sec ul li:nth-child(1).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.2s;
+}
+.bottom_tags_sec ul li:nth-child(2).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.4s;
+}
+.bottom_tags_sec ul li:nth-child(3).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.6s;
+}
+.bottom_tags_sec ul li:nth-child(4).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 0.8s;
+}
+.bottom_tags_sec ul li:nth-child(5).animate {
+  animation: slide_left 2s ease forwards;
+  animation-delay: 1s;
+}
+@media (max-width: 991px) {
+
+    .tags_sec, .tags_sec ul, .bottom_tags_sec ul, .footer-right, .footer-section, .footer-grid,.insta_gallary{
+        flex-direction: column;
+    }    
+    .fav_img_sec, .fav_img_sec2 {
+        justify-content:center;
+    }
+    #b_tag i{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    }
+    .fav_sec2{
+        /* margin-top: 52rem; */
+    }
+    .fav_sec2 p, .fav_sec2 h1{
+        margin-left: 5rem;
+    }
+}
+
+/* 
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+} */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  
+}
+@media (min-width: 1400px) {
+    
+}
+
+
+
+/*product information*/
+.product-info-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-info-section h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 1.5rem;
+}
+
+.product-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-info-table td {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.product-info-table td:first-child {
+  font-weight: bold;
+  width: 40%;
+  color: #444;
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 600px) {
+  .product-info-section {
+    padding: 0.5rem;
+  }
+
+  .product-info-table td {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .product-info-section h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
