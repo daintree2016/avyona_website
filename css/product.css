@@ -620,3 +620,34 @@ input[type="number"] {
 }
 
 
+
+.frame_image .reveal_mask.animate {
+  animation: reveal 1.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes reveal {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .contact, .frame_image {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+  .contact {
+    padding: 50px 30px;
+  }
+  .head_main nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
