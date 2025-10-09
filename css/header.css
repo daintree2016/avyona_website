@@ -8,7 +8,7 @@
     border-bottom: 1px solid var(--logo_color);
 
 }
-.head_main img{
+#logo{
     height: 24px;
 }
 
@@ -81,7 +81,8 @@
 }
 
 .our_pro_card {
-    background-color: #c3e3c0;
+    /* background-color: #c3e3c0; */
+    background-color: white;
     z-index: 4;
     height: 500px;
     width: 600px;
@@ -100,6 +101,16 @@
     transform: translateY(0);
     cursor: pointer;
     pointer-events: auto; 
+}
+.pro_sec{
+    display:grid;
+    grid-template-columns: auto auto;
+    row-gap: 2rem;
+}
+
+.pro_show img{
+    height:120px;
+    background-color: #4a4a4a;;
 }
 
 /* scalling */
