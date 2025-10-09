@@ -102,6 +102,7 @@ body {
   font-size: 1rem;
 }
 
+
 /* ===== SECTION 2 ===== */
 .about-image-section {
   padding: 40px 10% 40px; /* ↓ reduced bottom padding (was 60px/80px) */
@@ -308,6 +309,12 @@ body {
   }
 }
 
+
+
+
+
+
+
 /*4th section mission*/
 
 /* ===== FIXED MISSION SECTION ===== */
@@ -440,4 +447,64 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+
+
+/*contact us*/
+.contact-cta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5eeea;
+  padding: 40px 30px; /* Reduced height */
+  margin: 40px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-cta-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-cta-content h2 {
+  font-size: 22px;
+  color: #5c4532;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contact-cta-content button {
+  background-color: #5c4532;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-cta-content button:hover {
+  background-color: #3e2f24;
+}
+
+.contact-cta-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-cta-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
 }
