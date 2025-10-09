@@ -1,9 +1,9 @@
 
 <div class="head_main">
-    <img src="images/avyona logo.png" id="logo" alt="avyona logo"/>
-    <nav>
-        <div class="product-container" style="display: flex; gap:0.2rem; align-items: center;margin-top:-0.9rem;">
-            <li>Product</li>
+    <a href="./index.html"><img src="images/avyona logo.png" id="logo" alt="avyona logo"/></a>
+    <nav class="head_nav">
+        <div class="product-container" style="display: flex; gap:0.2rem; align-items: center;">
+            <a><li>Product</li></a>
             <i class="fa-solid fa-angle-down" id="down_arrow"></i>
                 <div class="our_pro_card">
                     <p>OUR PRODUCTS</p>
@@ -46,33 +46,78 @@
                     </div>
                 </div>
         </div>
-        <div><li>About Us</li><hr/></div>
-        <div><li>Sustainability</li><hr/></div>
+        <a href="./about.html"><div><li>About Us</li><hr/></div></a>
+        <a href=""><div><li>Sustainability</li><hr/></div></a>
         <div><li>Blog</li><hr/></div>
-        <div><li>Contact Us</li><hr/></div>
+        <a href="./contact.html"><div><li>Contact Us</li><hr/></div></a>
     </nav>
     <div class="others">
-        <div class="search_Sec">
-            <i class="fa-solid fa-magnifying-glass"></i>
+      <div class="search_Sec">
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
         </div>
+
         <div class="cart_icon_sec">
             <i class="fa-solid fa-cart-shopping"></i>
             <p>0</p>
         </div>
-        
     </div>
-    <div class="hamburger">
-        <i class="fa-solid fa-menu"></i>
-        <nav>
-            <div class="product-container" style="display: flex; gap:0.2rem; align-items: center;margin-top:-0.9rem;">
-                <li>Product</li>
-                <i class="fa-solid fa-angle-down" id="down_arrow"></i>
-                    <div class="our_pro_card"></div>
-            </div>
-            <div><li>About Us</li><hr/></div>
-            <div><li>Sustainability</li><hr/></div>
-            <div><li>Blog</li><hr/></div>
-            <div><li>Contact Us</li><hr/></div>
-        </nav>
+    <div class="search_box">
+        <input type="text" placeholder="Search here"/>
+        <button>Search</button>
     </div>
-</div>
+
+    <div class="hamburger" onclick="getmenunav()">
+    <i class="fa-solid fa-bars"></i>
+    <nav class="hamburger-nav">
+        <div class="product-container" style="display: flex; gap:0.2rem; align-items: center;">
+            <a><li>Product</li></a>
+            <i class="fa-solid fa-angle-down" id="down_arrow"></i>
+            <center><div class="our_pro_card">
+                 <p>OUR PRODUCTS</p>
+                    <div class="pro_sec">
+                        <a href="product.html"><div class="pro_show" style="display: flex;gap:1rem">
+                            <img src="./images/2.png">
+                            <div>
+                                <h4>Title placeholder</h4>
+                                <h4>$ 14.00 USD</h4>
+                            </div>
+                        </div></a>
+                        <a href="product.html"><div class="pro_show" style="display: flex;gap:1rem">
+                            <img src="./images/3.png">
+                            <div>
+                                <h4>Title placeholder</h4>
+                                <h4>$ 14.00 USD</h4>
+                            </div>
+                        </div></a>
+                        <a href="product.html"><div class="pro_show" style="display: flex;gap:1rem">
+                            <img src="./images/7.png">
+                            <div>
+                                <h4>Title placeholder</h4>
+                                <h4>$ 14.00 USD</h4>
+                            </div>
+                        </div></a>
+                        <a href="product.html"><div class="pro_show" style="display: flex;gap:1rem">
+                            <img src="./images/5.png">
+                            <div>
+                                <h4>Title placeholder</h4>
+                                <h4>$ 14.00 USD</h4>
+                            </div>
+                        </div></a>
+                        <a href="product.html"><div class="pro_show" style="display: flex;gap:1rem">
+                            <img src="./images/8.png">
+                            <div>
+                                <h4>Title placeholder</h4>
+                                <h4>$ 14.00 USD</h4>
+                            </div>
+                        </div></a>
+                    </div>
+            </div></center>
+        </div>
+        <a href="./about.html"><div><li>About Us</li></div></a>
+        <a href=""><div><li>Sustainability</li></div></a>
+        <div><li>Blog</li></div>
+        <a href="./contact.html"><div><li>Contact Us</li></div></a>
+    </nav>
+    </div>
+
+

@@ -444,6 +444,9 @@ header span {
     .fav_sec2 p, .fav_sec2 h1{
         margin-left: 5rem;
     }
+    .text_slide p {
+        width: auto;
+    }
 }
 
 /* 

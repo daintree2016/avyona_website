@@ -173,11 +173,41 @@
 </body>
 </html>
 <script>
+
+function setupHamburgerMenu() {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = hamburger.querySelector(".hamburger-nav");
+
+    // Toggle search bar
+    const searchIcon = document.getElementById('search-icon');
+    const searchBox = document.querySelector('.search_box'); // use .search_box
+
+    searchIcon.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent click from bubbling
+        searchBox.classList.toggle('active');
+    });
+
+    // Close search if clicking outside
+    document.addEventListener('click', (e) => {
+        if (!searchBox.contains(e.target) && e.target !== searchIcon) {
+            searchBox.classList.remove('active');
+        }
+    });
+
+    // Hamburger menu toggle
+    if (hamburger && nav) {
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("show-nav");
+        });
+    }
+}
+
 function getheader(){
     fetch('header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header_sec').innerHTML = data;
+        setupHamburgerMenu();
 
         const headerText = document.getElementById("header-text");
         if(headerText){
@@ -189,6 +219,18 @@ function getheader(){
     })
     .catch(err => console.error("Error loading header:", err));
 }
+
+function getfooter(){
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        const footer = document.querySelector('.footer-section');
+        footer.innerHTML = data;
+        observeElements(); 
+    })
+    .catch(err => console.error("Error loading footer:", err));
+}
+
 
 function getfooter(){
     fetch('footer.html')
