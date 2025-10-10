@@ -322,7 +322,7 @@ input[type="number"] {
   }
 }
 /*faqs*/
-.faq-section-container { /* light biscuit color */
+.faq-section-container { 
   padding: 3rem 2rem;
   font-family: Arial, sans-serif;
 }
@@ -355,7 +355,7 @@ input[type="number"] {
 }
 
 .faq-items-block {
-  flex: 1 1 65%;
+  flex: 1 1 25%;
 }
 
 .faq-item {
