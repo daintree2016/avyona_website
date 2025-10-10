@@ -188,7 +188,7 @@ header span {
 
 
 /*animations banner*/
-@media (max-width: 768px) {
+@media (max-width: 360px) {
   .product-banner {
     height: 220px;
   }
@@ -397,3 +397,71 @@ header span {
   border-radius: 6px;
 }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Styling */
+.features-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 60px 40px;
+  border-top: 1px solid #e5ded8;
+  border-bottom: 1px solid #e5ded8;
+  animation: slideIn 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+/* Animation */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Each Feature Box */
+.feature-box {
+  text-align: center;
+  color: #5b4436;
+  max-width: 220px;
+}
+
+/* Icon Styling */
+.icon {
+  background-color: #f5ede7;
+  color: #5b4436;
+  font-size: 22px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title & Text */
+.feature-box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  font-size: 14px;
+  color: #8c7b6e;
+  line-height: 1.5;
+}

@@ -322,13 +322,13 @@ input[type="number"] {
   }
 }
 /*faqs*/
-.faq-section-container { /* light biscuit color */
+.faq-section-container { 
   padding: 3rem 2rem;
   font-family: Arial, sans-serif;
 }
 
 .faq-grid {
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -355,7 +355,7 @@ input[type="number"] {
 }
 
 .faq-items-block {
-  flex: 1 1 65%;
+  flex: 1 1 25%;
 }
 
 .faq-item {
@@ -746,104 +746,3 @@ input[type="number"] {
 
 
 
-/* Footer Responsive Styling */
-
-/* Base footer styles (if you want to override some default spacing, alignment) */
-footer {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #f5f5f5; /* Adjust as needed */
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-/* Footer sections inside */
-footer > div {
-  flex: 1 1 30%;
-  margin: 0.5rem 1rem;
-  min-width: 250px;
-}
-
-/* Footer text alignment */
-footer h3, footer p, footer ul {
-  margin: 0 0 1rem 0;
-  color: #333;
-}
-
-/* Footer links (example) */
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Phones */
-@media (max-width: 480px) {
-  footer {
-    flex-direction: column !important;
-    padding: 1rem !important;
-    margin: 1rem !important;
-    text-align: center !important;
-  }
-  footer > div {
-    min-width: 100% !important;
-    margin: 0.5rem 0 !important;
-  }
-  footer ul {
-    display: inline-block;
-    padding-left: 0;
-  }
-}
-
-/* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  footer {
-    flex-direction: row !important;
-    justify-content: space-around !important;
-    padding: 1.5rem 2rem !important;
-    margin: 1.5rem auto !important;
-  }
-  footer > div {
-    min-width: 45% !important;
-    margin: 0.75rem !important;
-  }
-  footer ul {
-    padding-left: 0;
-  }
-}
-
-/* Laptops */
-@media (min-width: 769px) and (max-width: 1200px) {
-  footer {
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    padding: 2rem 3rem !important;
-    margin: 2rem auto !important;
-  }
-  footer > div {
-    min-width: 30% !important;
-    margin: 1rem !important;
-  }
-}
-
-/* Desktops */
-@media (min-width: 1201px) {
-  footer {
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 1200px;
-    padding: 2rem 4rem;
-    margin: 2rem auto;
-  }
-  footer > div {
-    min-width: 25%;
-    margin: 1rem 1.5rem;
-  }
-}
