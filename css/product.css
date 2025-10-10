@@ -505,6 +505,74 @@ input[type="number"] {
   font-size: 18px;
 }
 
+
+
+/* Section Styling */
+.features-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 60px 40px;
+  border-top: 1px solid #e5ded8;
+  border-bottom: 1px solid #e5ded8;
+  animation: slideIn 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+/* Animation */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Each Feature Box */
+.feature-box {
+  text-align: center;
+  color: #5b4436;
+  max-width: 220px;
+}
+
+/* Icon Styling */
+.icon {
+  background-color: #f5ede7;
+  color: #5b4436;
+  font-size: 22px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title & Text */
+.feature-box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  font-size: 14px;
+  color: #8c7b6e;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* initial state */
 .bottom_tags_sec ul li {
   opacity: 0;
@@ -746,104 +814,3 @@ input[type="number"] {
 
 
 
-/* Footer Responsive Styling */
-
-/* Base footer styles (if you want to override some default spacing, alignment) */
-footer {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #f5f5f5; /* Adjust as needed */
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-/* Footer sections inside */
-footer > div {
-  flex: 1 1 30%;
-  margin: 0.5rem 1rem;
-  min-width: 250px;
-}
-
-/* Footer text alignment */
-footer h3, footer p, footer ul {
-  margin: 0 0 1rem 0;
-  color: #333;
-}
-
-/* Footer links (example) */
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Phones */
-@media (max-width: 480px) {
-  footer {
-    flex-direction: column !important;
-    padding: 1rem !important;
-    margin: 1rem !important;
-    text-align: center !important;
-  }
-  footer > div {
-    min-width: 100% !important;
-    margin: 0.5rem 0 !important;
-  }
-  footer ul {
-    display: inline-block;
-    padding-left: 0;
-  }
-}
-
-/* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  footer {
-    flex-direction: row !important;
-    justify-content: space-around !important;
-    padding: 1.5rem 2rem !important;
-    margin: 1.5rem auto !important;
-  }
-  footer > div {
-    min-width: 45% !important;
-    margin: 0.75rem !important;
-  }
-  footer ul {
-    padding-left: 0;
-  }
-}
-
-/* Laptops */
-@media (min-width: 769px) and (max-width: 1200px) {
-  footer {
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    padding: 2rem 3rem !important;
-    margin: 2rem auto !important;
-  }
-  footer > div {
-    min-width: 30% !important;
-    margin: 1rem !important;
-  }
-}
-
-/* Desktops */
-@media (min-width: 1201px) {
-  footer {
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 1200px;
-    padding: 2rem 4rem;
-    margin: 2rem auto;
-  }
-  footer > div {
-    min-width: 25%;
-    margin: 1rem 1.5rem;
-  }
-}
