@@ -501,7 +501,7 @@ header span {
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 2000px) {
     .bottom_tags_sec{
         width: 60%;
     }
