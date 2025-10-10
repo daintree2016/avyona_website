@@ -438,6 +438,13 @@ header span {
     background-color: rgb(255, 255, 255);
     color: black;
     }
+    .adv_banners{
+        width: 100%;
+        flex-direction: column;
+    }
+    .adv_img{
+        width: 100%;
+    }
     .fav_sec2{
         /* margin-top: 52rem; */
     }
