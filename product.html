@@ -351,11 +351,52 @@
   <script>
 
 
+function setupHamburgerMenu() {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = hamburger.querySelector(".hamburger-nav");
+
+    const searchIcon = document.getElementById('search-icon');
+    const searchBox = document.querySelector('.search_box'); // use .search_box
+
+    searchIcon.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        searchBox.classList.toggle('active');
+    });
+
+
+    document.addEventListener('click', (e) => {
+        if (!searchBox.contains(e.target) && e.target !== searchIcon) {
+            searchBox.classList.remove('active');
+        }
+    });
+
+    const cartIcon = document.querySelector('.cart_icon_sec');
+    const cartPanel = document.querySelector('.cart');
+
+    cartIcon.addEventListener('click', () => {
+        cartPanel.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!cartPanel.contains(e.target) && !cartIcon.contains(e.target)) {
+            cartPanel.classList.remove('active');
+        }
+    });
+
+
+    if (hamburger && nav) {
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("show-nav");
+        });
+    }
+}
+
 function getheader(){
     fetch('header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header_sec').innerHTML = data;
+        setupHamburgerMenu();
 
         const headerText = document.getElementById("header-text");
         if(headerText){
