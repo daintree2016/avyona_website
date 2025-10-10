@@ -56,51 +56,106 @@ body {
 
 
 /* ===== SECTION 1 ===== */
+/* === ABOUT SECTION - MATCHING MISSION/VISION LAYOUT === */
 .about-section {
-  width: 100%;
-  padding: 60px 28% 40px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px 20px;
   gap: 60px;
+  text-align: left;
 }
 
 .about-left {
   flex: 1;
-  max-width: 35%;
+  max-width: 400px;
 }
 
 .about-left h2 {
-  font-size: 2.5rem;
+  font-size: 42px;
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
 }
 
 .about-right {
-  flex: 1.5;
+  flex: 1;
+  max-width: 600px;
 }
 
 .about-right p {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 30px;
-  max-width: 800px;
 }
 
+/* === Stats Section === */
 .stats {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 30px; /* reduced gap: 15px row-gap, 30px column-gap */
+  align-items: start; /* aligns stats nicely */
 }
 
 .stat h3 {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 3px; /* reduced margin */
+  color: #333;
 }
 
 .stat p {
-  font-size: 1rem;
+  font-size: 14px;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* remove extra margin */
 }
+
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .about-left,
+  .about-right {
+    max-width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr); /* Keep two per row on tablet/phone */
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .about-left h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-left h2 {
+    font-size: 28px;
+  }
+
+  .about-right p {
+    font-size: 15px;
+  }
+
+  .stat h3 {
+    font-size: 20px;
+  }
+
+  .stat p {
+    font-size: 13px;
+  }
+}
+
 
 /* ===== SECTION 2 ===== */
 .about-image-section {
@@ -181,7 +236,7 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
+@media (max-width: 572px) {
   .about-section,
   .about-image-section {
     flex-direction: column;
@@ -198,115 +253,96 @@ body {
   .stats {
     justify-content: center;
   }
+  footer{
+    justify-content: center;
+  }
 }
 
 
 
 /* ===== VISION SECTION ===== 3rd section */
-.vision_section {
-  width: 100%;
-  padding: 40px 28% 80px; /* ↓ reduced top padding (was 80px) */
+/* === VISION SECTION (styled like mission-section) === */
+.vision-section {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  
-}
-
-.vision_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
   flex-wrap: wrap;
+  padding: 60px 20px;
+  gap: 60px;
+  text-align: left;
 }
 
-.vision_text {
+.vision-text {
   flex: 1;
-  min-width: 300px;
+  max-width: 600px;
 }
 
 .vision-text h2 {
   font-size: 42px;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-
-.vision_text p {
-   font-family: "Poppins";
-  line-height: 1.7;
-  color: #6b5b4b;
-  margin-bottom: 20px;
-   display: block;
-   
+.vision-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
 }
 
-.vision_line {
-  width: 85px;
-  height: 1.5px;
-  background: #5a4632;
-}
-
-.vision_images {
-  flex: 1;
-  position: relative;
-  min-width: 300px;
-}
-
-.vision_img_wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.vision_img {
-  position: relative;
-  width: 70%;
-  overflow: hidden;
-}
-
-.vision_img img {
-  width: 100%;
+.vision-text::after {
+  content: "";
   display: block;
-  transition: transform 1.5s ease;
+  width: 50px;
+  height: 1px;
+  background-color: #5c4532;
+  margin-top: 20px;
 }
 
-.vision_img.second {
-  position: absolute;
-  bottom: -60px;
-  right: -60px;
-  width: 60%;
+/* === Animated image section (no JS) === */
+.vision-image {
+  flex: 1;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideInFromRight 1.5s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
-.vision_img img:hover {
-  transform: scale(1.05);
-}
-
-/* Animation masks */
-.vision_mask {
-  position: absolute;
-  top: 0;
-  left: 0;
+.vision-image img {
   width: 100%;
-  height: 100%;
-  background: #8c8c8c;
-  z-index: 2;
+  border-radius: 8px;
+  display: block;
 }
 
-.vision_mask.animate {
-  animation: visionReveal 2s ease forwards;
-  animation-delay: 0.2s;
+/* === Keyframes animation === */
+@keyframes slideInFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Keyframes */
-@keyframes visionReveal {
-  0% {
-    left: 0;
-    width: 100%;
+@media (max-width: 768px) {
+  .vision-section {
+    flex-direction: column;
+    text-align: center;
   }
-  100% {
-    left: 100%;
-    width: 0;
+
+  .vision-text,
+  .vision-image {
+    max-width: 100%;
+  }
+
+  .vision-text::after {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
+
+
+
+
 
 /*4th section mission*/
 
@@ -441,3 +477,66 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+
+
+/*contact us*/
+.contact-cta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5eeea;
+  padding: 40px 30px; /* Reduced height */
+  margin: 40px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-cta-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-cta-content h2 {
+  font-size: 22px;
+  color: #5c4532;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contact-cta-content button {
+  background-color: #5c4532;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-cta-content button:hover {
+  background-color: #3e2f24;
+}
+
+.contact-cta-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-cta-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+
+

@@ -12,15 +12,13 @@ header {
     background-color: var(--head_bg);
     padding: 0.8px;
     color: var(--head_font_color);
-    
-    /* color: black; */
 }
+
 .header_text {
     position: relative;
     top: -80px;
     opacity: 0;
     animation: revealText 0.9s ease-out forwards;
-    
 }
 
 @keyframes revealText {
@@ -33,9 +31,8 @@ header span {
 }
 
 body {
-    font-family:Poppins;
+    font-family: Poppins;
 }
-
 
 /* Hamburger menu hidden */
 .hamburger {
@@ -52,15 +49,17 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   border-radius: 6px;
   overflow: hidden;
+  min-height: 500px; /* ensure min height for balanced look */
 }
 
 /* LEFT FORM */
 .contact {
-  flex: 1;
+  flex: 1 1 50%;
   padding: 80px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .contact h4 {
@@ -97,6 +96,7 @@ body {
   margin-bottom: 24px;
   font-size: 14px;
   background: #fff;
+  box-sizing: border-box;
 }
 
 .contact textarea {
@@ -121,9 +121,11 @@ body {
 
 /* RIGHT IMAGE */
 .contact_img {
-  flex: 1;
+  flex: 1 1 50%;
   position: relative;
   overflow: hidden;
+  min-width: 300px;
+  max-height: 100%; /* keep within container */
 }
 
 .contact_img img {
@@ -131,6 +133,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
+  min-height: 500px; /* match container min height */
 }
 
 /* REVEAL ANIMATION */
@@ -140,7 +144,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #8a6d5c;
   background: #454545;
   z-index: 2;
 }
@@ -156,17 +159,27 @@ body {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+    min-height: 450px;
+  }
+}
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
+    min-height: auto;
   }
   .contact, .contact_img {
     flex: none;
     width: 100%;
     height: auto;
-  }
-  .contact {
     padding: 50px 30px;
+    min-height: auto;
+  }
+  .contact_img img {
+    min-height: 250px;
   }
   .head_main nav {
     display: none;
@@ -175,86 +188,79 @@ body {
     display: block;
   }
 }
+
 /* Dream Section */
 /*map*/
-    .contact-us-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 60px;
-      max-width: 1200px;
-      margin: auto;
-      font-family: 'Poppins', sans-serif;
-    }
+.contact-us-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
 
-    .contact-us-info {
-      flex: 1;
-      padding-right: 40px;
-    }
+.contact-us-info {
+  flex: 1;
+  padding-right: 40px;
+}
 
-    .contact-us-info h1 {
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
+.contact-us-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
-    .contact-us-info p {
-      font-size: 16px;
-      color: #333;
-      line-height: 1.6;
-    }
+.contact-us-info p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
 
-    .contact-us-info .location,
-    .contact-us-info .hours {
-      margin-top: 30px;
-    }
+.contact-us-info .location,
+.contact-us-info .hours {
+  margin-top: 30px;
+}
 
-    .contact-us-info .location h3,
-    .contact-us-info .hours h3 {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 700;
-    }
+.contact-us-info .location h3,
+.contact-us-info .hours h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
 
-    .contact-us-info .location p,
-    .contact-us-info .hours p {
-      margin: 5px 0 0;
-      font-size: 14px;
-      color: #888;
-    }
+.contact-us-info .location p,
+.contact-us-info .hours p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #888;
+}
 
-    .contact-us-map {
-      flex: 1;
-      height: 350px;
-    }
+.contact-us-map {
+  flex: 1;
+  height: 350px;
+}
 
-    .contact-us-map iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+.contact-us-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-    @media (max-width: 768px) {
-      .contact-us-section {
-        flex-direction: column;
-        padding: 30px;
-      }
+@media (max-width: 768px) {
+  .contact-us-section {
+    flex-direction: column;
+    padding: 30px;
+  }
 
-      .contact-us-info {
-        padding-right: 0;
-        margin-bottom: 40px;
-      }
+  .contact-us-info {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
 
-      .contact-us-map {
-        height: 300px;
-      }
-    }
-
-
-
-
-
-
-
-
-    
+  .contact-us-map {
+    height: 300px;
+  }
+}
