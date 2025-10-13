@@ -118,18 +118,17 @@ header span {
   margin: 1rem 0;
 }
 
-input[type="text"],
-input[type="number"] {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  width: 100%;
-}
 .quantity{
   
+  margin-bottom: 1rem;
+  padding: 0.5rem;
   max-width: 250px;
   font-size: 1rem;
 }
 .coupon{
+  
+  margin-bottom: 1rem;
+  padding: 0.5rem;
    max-width: 250px;
   font-size: 1rem;
 }
