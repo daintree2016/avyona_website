@@ -501,8 +501,27 @@ header span {
     }
 }
 
-@media (min-width: 1400px) {
-    
+@media (min-width: 2000px) {
+    .bottom_tags_sec{
+        width: 60%;
+    }
+    .cts{
+        width: 60%;
+    }
+    #footer-section{
+        width: 60%;
+    }
+    .insta_gallary{
+        width: 60%;
+    }
+    .insta_heading{
+        margin-left: 35rem;
+    }
+    header, #header_sec, .main_banner{
+        width: 60%;
+        justify-content: center;
+        justify-self:center;
+    }
 }
 
 
