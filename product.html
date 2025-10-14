@@ -27,97 +27,95 @@
   
 
 
+<div class="wrapper">
+  <div class="section-prod">
 
-<section>
-  <div class="product-page">
-    <!-- Left Side - Product Image with reveal mask -->
-    <div class="left-side">
-  <!-- MAIN IMAGE with animation -->
-  <div class="main-image-wrapper">
-    <div class="frame_image"></div>
-    <img id="mainImage" src="images/b v1.png" alt="Roona Desk Lamp" />
-    <div class="reveal_mask"></div>
-  </div>
+    <div class="box-img">
+      <img id="img-main" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS802KhfQZDYP5M2sRoYgqF7F6O3btC3a6H4dgEQRoIb8CJmU9Pv3I1G43xxaxPPUBEbGEyqPpu_pBpjCnWd0fAm3qY7Z93vXbP7fWik1JQIr5kePcBqkMXJBg" alt="JBL Mic">
 
-  <!-- THUMBNAIL IMAGES -->
-  <div class="thumbnails">
-    <img src="images/b v1.png" onclick="changeImage(this.src)" />
-    <img src="images/h 1.png" onclick="changeImage(this.src)" />
-    <img src="images/w 1.png" onclick="changeImage(this.src)" />
-    <img id="mainImage" src="images/wv1.png" onclick="changeImage(this.src)" />
-  </div>
-</div>
+      <div class="row-thumbs">
+        <img class="thumb-img" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS802KhfQZDYP5M2sRoYgqF7F6O3btC3a6H4dgEQRoIb8CJmU9Pv3I1G43xxaxPPUBEbGEyqPpu_pBpjCnWd0fAm3qY7Z93vXbP7fWik1JQIr5kePcBqkMXJBg" alt="Thumb 1">
+        <img class="thumb-img" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR5EzhAb2ZH6PyjSQqtndfxYnFInx7wzDBrptqtadDWYVkM6XByKIiEKmPeZfrPxTflgCQpDEfdr1pT_bNzk_4MPOAblO2SubvZSbowZNZQb_kA8tDS_CozIw" alt="Thumb 2">
+        <img class="thumb-img" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR59FbOGbXf5fw983ft9oK5e9AlkgfPsnzv8I815KmUD99VhtBCSJWviAz0T5lPDLZ3uWV174dhwqHUayJvALfO8AejH5bgZJT9IfO6XdOa2ldT4fDjOd34Xg" alt="Thumb 3">
+        <img class="thumb-img" src="https://cdn.cinemacenter.in/image/cache/catalog/images2/0056431_akg-p220-large-diaphragm-cardioid-condenser-microphone_500-500x500w.png.webp" alt="Thumb 4">
+      </div>
+    </div>
 
+    <div class="box-info">
+      <h1 class="title-prod">JBL Mic</h1>
+      <p class="desc-prod">
+        Indulge your senses with our aromatic selection of fragrant plants. From delicate flowers to aromatic herbs, each plant is chosen for its scent and benefits.
+      </p>
+      <p class="price-prod">$21.00 USD</p>
 
-    <!-- Right Side - Product Details -->
-    <div class="right-side">
-      <h2>Digital photo frame</h2>
-      <p class="price">$400.00 USD</p>
-
-      <label for="coupon">Coupon Code:</label>
-      <input type="text" class="coupon" placeholder="Enter coupon code" />
-
-      <label for="quantity">Quantity:</label>
-      <input type="number" class="quantity" value="1" min="1" />
-
-      <div class="buttons">
-        <button class="add-to-cart">Add to Cart</button>
-        <button class="buy-now">Buy Now</button>
+      <div class="row-action">
+        <input type="number" value="1" min="1" class="input-qty"/>
+        <div class="btn-fav" title="Add to Wishlist">
+          <svg class="icon-fav" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path class="path-fav" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 
+              2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 
+              4.5 2.09C13.09 3.81 14.76 3 16.5 3 
+              19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+              6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <span>Add to Wishlist</span>
+        </div>
       </div>
 
-     <div class="payment-options">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="60" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" width="60" />
-  <img src="https://cdn.worldvectorlogo.com/logos/phonepe-1.svg" alt="PhonePe" width="60" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Google_Pay_Logo.svg" alt="Google Pay" width="60" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/UPI_Logo.svg" alt="UPI" width="60" />
-</div>
+      <div class="row-btn">
+        <button class="btn-cart">Add to Cart</button>
+        <button class="btn-buy">Buy Now</button>
+      </div>
 
+      <div class="info-ship">
+        <p>📦 Free worldwide shipping on all orders over $100 USD.</p>
+        <p>⏱ Delivers In: 3–7 Working Days <a href="#">Shipping & Return</a></p>
+      </div>
 
-      <!-- Expandable Sections -->
-      <div class="accordion">
+      <div class="accordion-sec">
         <div class="accordion-item">
-          <div class="accordion-header" onclick="toggleAccordion(this)">+ Keypoints</div>
+          <h3 class="accordion-title">Details</h3>
           <div class="accordion-content">
             <ul>
               <li><strong>Material:</strong> Solid Rubberwood</li>
               <li><strong>Cushion Material:</strong> Fabric with high-density foam</li>
-              <li><strong>Colour:</strong> Natural oak with grey fabric</li>
+              <li><strong>Colour:</strong> Natural oak colour with earth grey fabric</li>
               <li><strong>Design:</strong> Ergonomic backrest</li>
-              <li><strong>Box:</strong> 2 units of chair</li>
-              <li><strong>Packing:</strong> 2 unit/carton</li>
+              <li><strong>In the Box:</strong> 2 units of chair</li>
+              <li><strong>Packing:</strong> 2 units/carton</li>
             </ul>
           </div>
         </div>
+
         <div class="accordion-item">
-          <div class="accordion-header" onclick="toggleAccordion(this)">+ Shipping & Returns</div>
+          <h3 class="accordion-title">Shipping Information</h3>
           <div class="accordion-content">
-            <p>Shipping in 5–7 business days. Returns accepted within 14 days of delivery.</p>
+            <ul>
+              <li><strong>Shipping Method:</strong> Courier delivery</li>
+              <li><strong>Delivery Time:</strong> 3–7 working days</li>
+              <li><strong>Cost:</strong> Free for orders over $100 USD</li>
+              <li><strong>Returns:</strong> Free within 30 days</li>
+              <li><strong>Packaging:</strong> Eco-friendly carton</li>
+            </ul>
           </div>
         </div>
       </div>
+
     </div>
   </div>
-  </section>
-  
-
 
 <!-- Product Description Section -->
-<section class="description-section">
-  <h2>Product Description</h2>
-  <p>
-    This is a beautifully crafted product made from premium materials.
-    Perfect for those who value both style and durability. Whether you're
-    buying for yourself or someone special, this product delivers great value.
-  </p>
-
-  <p>
-    Features include high-resistance fabric, a comfortable fit, and a
-    modern design. Available in multiple sizes and colors to match your
-    personal style.
-  </p>
-</section>
-
+  <div class="desc-sec">
+    <h2>Description</h2>
+    <p>
+      We offer a diverse range of botanical wonders carefully curated to bring natural beauty and vitality into your living spaces...
+    </p>
+    <ul>
+      <li>Unraveling the Mysteries of Mycorrhizal Fungi...</li>
+      <li>The art of bonsai: mastering the ancient Japanese practice...</li>
+      <li>Harnessing the power of plant-based remedies...</li>
+    </ul>
+  </div>
 </div>
 <section class="product-info-section">
   <h2>Product Information</h2>
@@ -448,6 +446,36 @@ function toggleAccordion(header) {
     });
   });
 
+
+
+
+
+  // Wishlist toggle
+const favBtn = document.querySelector('.btn-fav');
+favBtn.addEventListener('click', () => {
+  favBtn.classList.toggle('active');
+});
+
+// Accordion toggle
+const accTitles = document.querySelectorAll('.accordion-title');
+accTitles.forEach(title => {
+  title.addEventListener('click', () => {
+    const parent = title.parentElement;
+    parent.classList.toggle('open');
+  });
+});
+
+// Thumbnail click
+const mainImg = document.getElementById('img-main');
+const thumbs = document.querySelectorAll('.thumb-img');
+
+thumbs.forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    mainImg.src = thumb.src;
+    thumbs.forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  });
+});
   </script>
 </body>
 </html>
