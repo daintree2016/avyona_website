@@ -149,7 +149,8 @@
     }
 
     .auth-link-text a {
-      color: #f97316;
+      color: black;
+      font-weight: bolder;
       text-decoration: none;
     }
 
@@ -208,10 +209,10 @@
       cursor: pointer;
       transition: color 0.3s ease;
     }
-
+/* 
     .close-btn:hover {
       color: #f97316;
-    }
+    } */
 
     #forgotPasswordForm input {
       width: 100%;
@@ -225,7 +226,7 @@
     #forgotPasswordForm button {
       width: 100%;
       padding: 12px;
-      background-color: #f97316;
+      background-color: #51dd7d;
       border: none;
       color: white;
       font-size: 15px;
@@ -236,5 +237,6 @@
     }
 
     #forgotPasswordForm button:hover {
-      background-color: #ea580c;
+      background-color: black;
+      color: white;
     }

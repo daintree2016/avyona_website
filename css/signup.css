@@ -144,8 +144,9 @@ body {
 }
 
 .auth-link-text a {
-  color: #f97316;
+  color: black;
   text-decoration: none;
+  font-weight: bolder;
 }
 
 /* Responsive */
