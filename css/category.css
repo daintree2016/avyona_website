@@ -262,6 +262,7 @@ body {
   .product-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+
   }
 
   .product-container {
@@ -296,5 +297,15 @@ body {
 
   header {
     padding: 10px;
+  }
+}
+@media (min-width: 2000px) {
+  .product-grid {
+   justify-self: center;
+   justify-items: center;
+   align-items: center;
+   justify-content: center;
+   background-color: red;
+
   }
 }
