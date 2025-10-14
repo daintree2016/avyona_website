@@ -40,7 +40,7 @@ body {
 }
 
 /* Center layout */
-.product-container {
+.container{
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -50,6 +50,7 @@ body {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
   gap: 65px;
   width: 100%;
   max-width: 1300px;
@@ -58,6 +59,8 @@ body {
 
 /* Product card */
 .product-cards {
+    display: grid;
+  grid-template-rows: auto auto auto;
   text-align: center;
   border-radius: 10px;
   overflow: hidden;
@@ -138,26 +141,15 @@ body {
 /* Details section */
 .details {
   margin-top: 12px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  padding: 15px;
+  
+  /* border-left: 1px solid black;
+  border-: 1px solid black; */
 }
 
-.details h3 {
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #000;
-}
 
-.details p {
-  font-size: 13px;
-  color: #555;
-  margin: 5px 0;
-}
-
-.details h4 {
-  font-size: 14px;
-  color: #000;
-  margin: 8px 0;
-}
 
 .details button {
   background: #000;
@@ -241,7 +233,7 @@ body {
     gap: 25px;
   }
 
-  .product-container {
+  .container{
     padding: 30px 25px;
   }
 
@@ -265,7 +257,7 @@ body {
 
   }
 
-  .product-container {
+  .container{
     padding: 20px 15px;
   }
 
@@ -300,12 +292,9 @@ body {
   }
 }
 @media (min-width: 2000px) {
-  .product-grid {
-   justify-self: center;
+  .container{
+   /* background-color: rgb(255, 212, 212); */
    justify-items: center;
-   align-items: center;
-   justify-content: center;
-   background-color: red;
 
   }
 }
