@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel='stylesheet' href='css/style.css'>
+  <link rel='stylesheet' href='css/header.css'>
+  <link rel='stylesheet' href='css/footer.css'>
+  <link rel='stylesheet' href='css/checkout.css'>
+  <title>Checkout - Avyona</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nova+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <header>
+        <p id="header-text" class="header_text">Get Free Shipping Worldwide with this code <span>AVYONA</span></p>
+    </header>
+
+  <div id="header_sec"></div>
+
+  <div class="checkout-container">
+    <div class="checkout-header">Checkout</div>
+
+    <div class="form-sections">
+      <!-- Billing + Payment Form -->
+      <form id="checkoutForm" class="checkout-form">
+        <h2>Billing Details</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91 987654321" required>
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Street, City, ZIP" required>
+
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">Select Country</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+          <option>Canada</option>
+          <option>Australia</option>
+        </select>
+
+        <h2>Payment Method</h2>
+        <div class="payment-options">
+          <div class="payment-option">
+            <input type="radio" id="debitCard" name="payment" value="debit">
+            <label for="debitCard"><i class="fa-solid fa-credit-card"></i> Debit / Credit Card</label>
+          </div>
+
+          <div class="payment-option">
+            <input type="radio" id="upi" name="payment" value="upi">
+            <label for="upi"><i class="fa-brands fa-google-pay"></i> UPI (GPay / PhonePe / Paytm)</label>
+          </div>
+
+          <div class="payment-option">
+            <input type="radio" id="cod" name="payment" value="cod">
+            <label for="cod"><i class="fa-solid fa-truck"></i> Cash on Delivery</label>
+          </div>
+
+          <div class="payment-option">
+            <input type="radio" id="wallet" name="payment" value="wallet">
+            <label for="wallet"><i class="fa-solid fa-wallet"></i> Wallet / NetBanking</label>
+          </div>
+        </div>
+
+        <!-- Card fields -->
+        <div class="card-fields" id="cardFields">
+          <div class="card-logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="Amex">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/RuPay.svg" alt="RuPay">
+          </div>
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" name="cardNumber" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+
+          <label for="expiry">Expiry Date</label>
+          <input type="month" id="expiry" name="expiry">
+
+          <label for="cvv">CVV</label>
+          <input type="password" id="cvv" name="cvv" maxlength="3">
+        </div>
+
+        <button type="submit" class="btn-submit">Place Order</button>
+      </form>
+
+      <!-- Order Summary -->
+      <div class="order-summary" id="orderSummary">
+        <h2>Order Summary</h2>
+
+        <div class="cart-item">
+          <img src="./images/b v1.png" alt="Product 1">
+          <div class="cart-info">
+            <h4>Digital Photo Frame</h4>
+            <p>Qty: 1</p>
+          </div>
+          <span class="price">₹499</span>
+        </div>
+
+        <div class="cart-item">
+          <img src="./images/7.png" alt="Product 2">
+          <div class="cart-info">
+            <h4>AKG Mic</h4>
+            <p>Qty: 1</p>
+          </div>
+          <span class="price">₹799</span>
+        </div>
+
+        <div class="summary-totals">
+          <p><span>Subtotal:</span> <span>₹1,298</span></p>
+          <p><span>Shipping:</span> <span>₹49</span></p>
+          <p class="total"><span>Total:</span> <span>₹1,347</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-section" class="footer-section"></div>
+
+  <script>
+    const form = document.getElementById("checkoutForm");
+    const radios = document.querySelectorAll('input[name="payment"]');
+    const cardFields = document.getElementById("cardFields");
+    let active = null;
+
+    radios.forEach(radio => {
+      radio.addEventListener("click", (e) => {
+        if (active === radio) {
+          radio.checked = false;
+          active = null;
+          cardFields.style.display = "none";
+        } else {
+          active = radio;
+          if (radio.value === "debit") cardFields.style.display = "block";
+          else cardFields.style.display = "none";
+        }
+      });
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Order placed successfully!");
+      form.reset();
+      cardFields.style.display = "none";
+      active = null;
+    });
+    
+function setupHamburgerMenu() {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = hamburger.querySelector(".hamburger-nav");
+
+    const searchIcon = document.getElementById('search-icon');
+    const searchBox = document.querySelector('.search_box'); 
+
+    searchIcon.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        searchBox.classList.toggle('active');
+    });
+
+
+    document.addEventListener('click', (e) => {
+        if (!searchBox.contains(e.target) && e.target !== searchIcon) {
+            searchBox.classList.remove('active');
+        }
+    });
+
+    const cartIcon = document.querySelector('.cart_icon_sec');
+    const cartPanel = document.querySelector('.cart');
+
+    cartIcon.addEventListener('click', () => {
+        cartPanel.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!cartPanel.contains(e.target) && !cartIcon.contains(e.target)) {
+            cartPanel.classList.remove('active');
+        }
+    });
+
+
+    if (hamburger && nav) {
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("show-nav");
+        });
+    }
+}
+
+function getheader(){
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header_sec').innerHTML = data;
+        setupHamburgerMenu();
+
+        const headerText = document.getElementById("header-text");
+        if(headerText){
+            headerText.style.transform = "translateY(0)";
+            headerText.style.opacity = "1";
+        }
+
+        observeElements(); 
+    })
+    .catch(err => console.error("Error loading header:", err));
+}
+
+function getfooter(){
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        const footer = document.querySelector('.footer-section');
+        footer.innerHTML = data;
+        observeElements(); 
+    })
+    .catch(err => console.error("Error loading footer:", err));
+}
+
+
+function getfooter(){
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        const footer = document.querySelector('.footer-section');
+        footer.innerHTML = data;
+        observeElements(); 
+    })
+    .catch(err => console.error("Error loading footer:", err));
+}
+
+
+
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('animate'); 
+      observer.unobserve(entry.target);    
+    }
+  });
+}, { threshold: 0.2 });
+
+function observeElements(){
+    const revealElements = document.querySelectorAll(
+        '.reveal_mask, .reveal_mask2, .text_content, .text_slide, .bottom_tags_sec ul li, .footer-section *'
+    );
+    revealElements.forEach(el => observer.observe(el));
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    getheader();
+    getfooter(); 
+});
+  </script>
+</body>
+</html>
