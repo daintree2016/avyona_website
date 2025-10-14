@@ -184,7 +184,9 @@
 .search_box {
     position: absolute;
     top: 100%;
+    left: 0;
     right: 0;
+    width: 100%;
     display: flex;
     gap: 5px;
     opacity: 0;
@@ -194,21 +196,27 @@
     transition: all 0.3s ease;
     background: #fff;
     margin-top: 0.1rem;
-    padding: 2px;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     z-index: 10;
-    width: 100%;
-    /* min-width: 200px; */
 }
 
-.search_box input {
+
+.search_box form input {
     flex: 1;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
     height: 40px;
+    width: 100%;
+}
+.search_box form{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
 }
 
 .search_box button {
@@ -217,6 +225,7 @@
     background-color: #000;
     color: #fff;
     border-radius: 4px;
+    width: 100px;
     cursor: pointer;
     transition: 0.3s;
 }
