@@ -46,154 +46,235 @@ header span {
 
 
 
-* Wrapper to increase horizontal spacing */
-.section-container {
-  padding: 0.5rem; /* ✅ Adjust side spacing here */
-  box-sizing: border-box;
-}
-
-/* Main Container */
-.product-page {
-  display: flex;
-  width: 2000px;
+/*main*/
+.wrapper {
   max-width: 1200px;
-  margin: 0 auto;
-  gap: 1rem;
-  background: #fafafa;
-  border-radius: 8px;
-  overflow: hidden;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-/* Equal width sections */
-.left-side,
-.right-side,
-.third-side {
+/* Product Section */
+/* ===== Product Image Section Background ===== */
+.section-prod {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start; /* light blue background for full section */
+    padding: 40px 20px; /* add some padding inside the section */
+    border-radius: 12px;
+}
+
+/* Make the left image and thumbnails background light blue */
+.box-img {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* light blue background */
+    border-radius: 12px;
+}
+
+
+.row-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    width: 100%;
+    max-width: 400px;
+    padding-top: 30px;
+}
+
+.thumb-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: border 0.3s ease, transform 0.2s ease; /* white thumbnails background */
+    padding: 5px;
+}
+
+
+.thumb-img:hover {
+  border: 2px solid #000;
+  transform: scale(1.05);
+}
+
+.thumb-img.active {
+  border: 2px solid #000;
+}
+
+/* Info Box */
+.box-info {
   flex: 1;
-  padding: 2rem;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
 }
 
-/* Image Side */
-.left-side {
-  position: relative;
+.title-prod {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.left-side img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  transition: opacity 0.4s ease;
+.desc-prod {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-/*thumbnails*/
-.thumbnails {
-  display: flex;
-  margin-top: 1rem;
-  gap: 10px;
-  justify-content: center;
-}
-
-.thumbnails img {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 4px;
-  border: 2px solid transparent;
-}
-
-.thumbnails img:hover {
-  border-color: #333;
-}
-
-/* Product Info */
-.right-side h2 {
-  margin-bottom: 0.5rem;
-}
-
-.price {
+.price-prod {
   font-size: 1.5rem;
-  color: #b76e79;
-  margin: 1rem 0;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.quantity{
-  
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  max-width: 250px;
-  font-size: 1rem;
-}
-.coupon{
-  
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-   max-width: 250px;
-  font-size: 1rem;
-}
-
-.buttons {
+/* Action Row */
+.row-action {
   display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 260px;
+  margin-bottom: 15px;
 }
 
-.add-to-cart,
-.buy-now {
-  padding: 0.7rem 1.5rem;
+.input-qty {
+  width: 60px;
+  padding: 8px;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Wishlist */
+.btn-fav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
+  font-size: 1rem;
+  color: #2b2b1f;
+  user-select: none;
+}
+
+.icon-fav {
+  width: 24px;
+  height: 24px;
+}
+
+.path-fav {
+  fill: none;
+  stroke: #333;
+  stroke-width: 2;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.btn-fav.active .path-fav {
+  fill: red;
+  stroke: red;
+}
+
+/* Buttons */
+.row-btn {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-cart,
+.btn-buy {
+  padding: 10px 20px;
+  font-weight: 500;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.add-to-cart {
-  background: #ddd;
+.btn-cart {
+  background-color: #000;
+  color: #fff;
 }
 
-.buy-now {
-  background: #b76e79;
-  color: white;
+.btn-cart:hover {
+  background-color: #9df3b8;
+  color: #000;
 }
 
-.payment-options img {
-  margin-right: 15px;
-  vertical-align: middle;
+.btn-buy {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
 }
 
-/* Accordion Section */
-.accordion {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 2rem;
+.btn-buy:hover {
+  background-color: #9df3b8;
+  color: #000;
+}
+
+/* Shipping Info */
+.info-ship p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.info-ship a {
+  text-decoration: underline;
+  color: #333;
+}
+
+/* Accordion */
+.accordion-sec {
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.accordion-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0;
+}
+
+.accordion-title::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-title::after {
+  content: '−';
 }
 
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  display: none;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #444;
 }
 
-.accordion-content.active {
-  max-height: 300px;
-  margin-top: 10px;
-}
-
-.accordion-header {
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
+.accordion-item.open .accordion-content {
+  display: block;
 }
 
 .accordion-content ul {
-  padding-left: 1.2rem;
+  padding-left: 20px;
 }
 
 .accordion-content li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
-
 /* Reveal Animation */
 
 
@@ -231,24 +312,31 @@ header span {
   }
 }
 /*description section*/
-.description-section {
-  width: 100%;
-  max-width: 1200px;
-  margin: 2rem auto; /* space above and below */
-  padding: 0 2rem; /* same as .product-page internal padding */
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+
+/* Description Section */
+.desc-sec {
+  margin-top: 60px;
 }
 
-.description-section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: #333;
+.desc-sec h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.description-section p {
-  margin-bottom: 1rem;
-  color: #555;
+.desc-sec p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.desc-sec ul {
+  padding-left: 20px;
+}
+
+.desc-sec li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
 }
 
 
@@ -275,7 +363,6 @@ header span {
 
 .product-info-table td {
     padding: 0.8rem 1rem;
-    border-top: 1px solid #e0e0e0;
     font-size: 1rem;
     color: #333;
 }
@@ -283,7 +370,6 @@ header span {
 .product-info-table td:first-child {
     font-weight: bold;
     width: 40%;
-    background-color: #f9f9f9;
     color: #444;
 }
 
@@ -434,7 +520,7 @@ header span {
   background-color: #f5eeea;
   padding: 40px 30px; /* original padding */
   margin: 40px auto;
-  max-width: 1200px; /* keep same width as other sections */
+  max-width: 1100px; /* keep same width as other sections */
   border-radius: 8px;
   gap: 30px;
   flex-wrap: wrap;
