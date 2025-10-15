@@ -74,11 +74,11 @@ header span {
     padding: 20px; /* light blue background */
     border-radius: 12px;
     width: 100%;
-    height:80px;
+    height:300px;
 }
 
 #img-main {
-    height: 350px;
+    height: 100%;
 }
 
 
@@ -393,20 +393,58 @@ header span {
 }
 
 .product-list {
+    margin-top: 2rem;
+    max-width: 1200px;
     display: flex;
     gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 5rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+    justify-self: center;
+}
+
+.product-list::-webkit-scrollbar{
+    display: none;
+}
+
+
+.navs{
+    display: flex;
+    gap: 20px;
+}
+.navs div{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #00ABEA;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2px;
+    margin-left: 1.2rem;
+    margin-top: 2rem;
 }
 
 .product-card {
-    flex: 1 1 30%;
-    text-align: center;
-    cursor: pointer;
+   cursor: pointer;
+    width: 350px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 350px 50px 50px;
+    text-overflow: clip;
+    border: 2px solid rgb(230, 230, 230);
+    justify-content: left;
+    text-align: left;
+    padding: 20px;
+    flex-shrink: 0;
+    transition: 0.5s  ease;
 }
 
 .product-card img {
     width: 100%;
+    height: 90%;
     border-radius: 8px;
     transition: transform 0.4s ease;
 }
@@ -416,15 +454,93 @@ header span {
 }
 
 .product-card h3 {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    color: #5a4535;
+      width: 90%;
+  font-size: medium;
+  font-weight: bold;
+  color: black;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.2em;
+  max-height: 2.4em; 
+  text-overflow: ellipsis;
+  white-space: normal;
+    
 }
 
 .product-card p {
     font-size: 0.95rem;
     color: #777;
 }
+
+
+
+
+
+
+
+
+
+
+/*suggested 2*/
+
+/*.suggest_sec {*/
+/*  margin-top: 2rem;*/
+/*  display: flex;*/
+/*  gap: 2rem;*/
+/*  width: 100%;*/
+/*  padding: 20px;*/
+/*  overflow-x: auto;*/
+/*  overflow-y: hidden;*/
+/*  margin-bottom: 5rem;*/
+/*  padding-bottom: 1rem;*/
+/*  background: tomato;*/
+/*  scroll-behavior: smooth;*/
+/*}*/
+
+/*.suggest_sec::-webkit-scrollbar{*/
+/*    display: none;*/
+/*}*/
+/*.sug_pros {*/
+/*  width: 350px;*/
+/*  display: grid;*/
+/*  grid-template-columns: auto;*/
+/*  grid-template-rows: 250px 50px 50px;*/
+/*  text-overflow: clip;*/
+/*  border: 2px solid rgb(230, 230, 230);*/
+/*  justify-content: left;*/
+/*  text-align: left;*/
+/*  padding: 20px;*/
+/*  flex-shrink: 0;*/
+/*  transition: 0.5s ease;*/
+/*}*/
+/*.sug_pros div{*/
+/*    text-align: center;*/
+/*}*/
+
+/*.sug_pros:hover{*/
+/*    transform: scale(1.1);*/
+/*}*/
+/*#sug_title {*/
+/*  width: 90%;*/
+/*  font-size: medium;*/
+/*  font-weight: bold;*/
+/*  color: black;*/
+/*  display: -webkit-box;*/
+/*  -webkit-line-clamp: 2;*/
+/*  -webkit-box-orient: vertical;*/
+/*  overflow: hidden;*/
+/*  line-height: 1.2em;*/
+/*  max-height: 2.4em; */
+/*  text-overflow: ellipsis;*/
+/*  white-space: normal;*/
+/*}*/
+
+
+
+
+
 
 /* ===== FAQ Section ===== */
 /* FAQ Section */
