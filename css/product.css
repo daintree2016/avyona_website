@@ -73,6 +73,12 @@ header span {
     align-items: center;
     padding: 20px; /* light blue background */
     border-radius: 12px;
+    width: 100%;
+    height:80px;
+}
+
+#img-main {
+    height: 350px;
 }
 
 
