@@ -6,12 +6,11 @@
     --head_font_color: rgb(70, 129, 70);
 }
 
-
 /* ===== Container for equal spacing ===== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* equal left & right spacing */
+    padding: 0 20px;
 }
 
 /* ===== Header ===== */
@@ -40,13 +39,6 @@ header span {
 }
 
 /* ===== Product Section ===== */
-
-
-
-
-
-
-/*main*/
 .wrapper {
   max-width: 1200px;
   margin: 40px auto;
@@ -54,20 +46,19 @@ header span {
 }
 
 /* Product Section */
-/* ===== Product Image Section Background ===== */
 .section-prod {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
-    align-items: flex-start; /* light blue background for full section */
-    padding: 40px 20px; /* add some padding inside the section */
+    align-items: flex-start;
+    padding: 40px 20px;
     border-radius: 12px;
 }
 
-/* Make the left image and thumbnails background light blue */
+/* ===== Left Image Section ===== */
 .box-img {
     flex: 1;
-    min-width: 300px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +72,22 @@ header span {
     height: 100%;
 }
 
+/* ✅ FIXED MAIN PRODUCT IMAGE SIZE */
+.main-prod-img {
+    width: 100%;
+    max-width: 400px;       /* consistent max width for all products */
+    height: 400px;          /* fixed height to ensure uniform layout */
+    object-fit: contain;    /* ensures full image fits without cropping */
+    border-radius: 8px;
+    background-color: #f8f8f8; /* optional soft background */
+    transition: transform 0.3s ease;
+}
 
+.main-prod-img:hover {
+    transform: scale(1.02);
+}
+
+/* Thumbnails */
 .row-thumbs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -98,10 +104,9 @@ header span {
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 6px;
-    transition: border 0.3s ease, transform 0.2s ease; /* white thumbnails background */
+    transition: border 0.3s ease, transform 0.2s ease;
     padding: 5px;
 }
-
 
 .thumb-img:hover {
   border: 2px solid #000;
@@ -112,7 +117,7 @@ header span {
   border: 2px solid #000;
 }
 
-/* Info Box */
+/* ===== Right Info Section ===== */
 .box-info {
   flex: 1;
   min-width: 300px;
@@ -274,51 +279,6 @@ header span {
   display: block;
 }
 
-.accordion-content ul {
-  padding-left: 20px;
-}
-
-.accordion-content li {
-  margin-bottom: 8px;
-}
-/* Reveal Animation */
-
-
-@keyframes reveal {
-  0% {
-    left: 0;
-    width: 100%;
-  }
-  100% {
-    left: 100%;
-    width: 0;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .product-page {
-    flex-direction: column;
-  }
-
-  .left-side,
-  .right-side,
-  .third-side {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .right-side {
-    align-items: center;
-    text-align: center;
-  }
-
-  .accordion {
-    max-width: 100%;
-  }
-}
-/*description section*/
-
 /* Description Section */
 .desc-sec {
   margin-top: 60px;
@@ -345,13 +305,11 @@ header span {
   font-size: 0.95rem;
 }
 
-
-
 /* ===== Product Info Section ===== */
 .product-info-section {
-    max-width: 1200px; /* same as container */
+    max-width: 1200px;
     margin: 2rem auto;
-    padding: 20px; /* same spacing as container */
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
@@ -543,9 +501,8 @@ header span {
 
 
 /* ===== FAQ Section ===== */
-/* FAQ Section */
 .faq-section-container { 
-  padding: 3rem 20px; /* side padding consistent with other sections */
+  padding: 3rem 20px;
   font-family: Arial, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
@@ -625,28 +582,19 @@ header span {
   line-height: 1.6;
 }
 
-/* Responsive FAQ */
-@media (max-width: 991px) {
-  .faq-grid {
-    flex-direction: column;
-  }
-}
-
-
 /* ===== Contact Section ===== */
-/* ===== Contact Section (Fixed Spacing) ===== */
 .contact-cta-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f5eeea;
-  padding: 40px 30px; /* original padding */
+  padding: 40px 30px;
   margin: 40px auto;
-  max-width: 1100px; /* keep same width as other sections */
+  max-width: 1100px;
   border-radius: 8px;
   gap: 30px;
   flex-wrap: wrap;
-  box-sizing: border-box; /* ensure padding included in width */
+  box-sizing: border-box;
 }
 
 .contact-cta-content {
@@ -693,24 +641,6 @@ header span {
   border-radius: 6px;
 }
 
-/* ===== Responsive Fix for Contact Section ===== */
-@media (max-width: 991px) {
-  .contact-cta-section {
-    flex-direction: column;
-    padding: 30px 20px; /* adjust padding on mobile */
-  }
-
-  .contact-cta-content,
-  .contact-cta-image {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .contact-cta-content h2 {
-    margin-bottom: 20px;
-  }
-}
-
 /* ===== Bottom Tags Section ===== */
 .bottom_tags_sec {
     display: flex;
@@ -724,15 +654,15 @@ header span {
 
 /* ===== Responsive Layout ===== */
 @media (max-width: 991px) {
-    .product-container,
+    .section-prod,
     .contact-cta-section,
     .faq-grid {
         flex-direction: column;
         gap: 30px;
     }
 
-    .image-section,
-    .details-section,
+    .box-img,
+    .box-info,
     .contact-cta-content,
     .contact-cta-image {
         flex: 1 1 100%;
@@ -740,12 +670,13 @@ header span {
 }
 
 @media (max-width: 480px) {
-    .thumbnails img {
-        width: 50px;
-        height: 50px;
+    .thumb-img {
+        width: 60px;
+        height: 60px;
     }
 
-    .buttons button {
+    .btn-cart,
+    .btn-buy {
         width: 100%;
     }
 }
