@@ -249,7 +249,7 @@ body {
   border: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 360px) {
   .contact-us-section {
     flex-direction: column;
     padding: 30px;
@@ -262,5 +262,58 @@ body {
 
   .contact-us-map {
     height: 300px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    min-height: auto;
+  }
+
+  .contact, .contact_img {
+    box-sizing: border-box;  /* include padding in width */
+    width: 50%;              /* half of container including padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Contact section padding */
+  .contact {
+    padding: 5px;             /* small padding inside form */
+  }
+
+  /* Contact image padding */
+  .contact_img {
+    padding-left: 5px;        /* small left spacing */
+    padding-right: 120px;      /* add right padding */
+  }
+
+  .contact_img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .contact h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .contact button {
+    width: 90px;
+    padding: 10px 12px;
+    font-size: 13px;
   }
 }
