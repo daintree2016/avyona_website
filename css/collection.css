@@ -184,16 +184,6 @@ header span {
 }
 
 
-/*animations banner*/
-@media (max-width: 360px) {
-  .product-banner {
-    height: 220px;
-  }
-
-  .product-banner .text-content h1 {
-    font-size: 24px;
-  }
-}
 
     .catalog {
       padding: 40px 20px;
@@ -473,7 +463,6 @@ header span {
     padding: 0;
     overflow-x: hidden;
   }
-
   header {
     padding: 8px 10px;
   }
