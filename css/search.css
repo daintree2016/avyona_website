@@ -356,6 +356,7 @@ body {
     grid-auto-rows: minmax(120px, auto);
     gap: 20px; /* small gap between products */
     width: 100%;
+    padding-right: 5px;
   }
 
   /* Product card adjustments */
