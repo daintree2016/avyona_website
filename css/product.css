@@ -405,6 +405,7 @@ header span {
     height: 90%;
     border-radius: 8px;
     transition: transform 0.4s ease;
+    object-fit: contain;
 }
 
 .product-card:hover img {
@@ -653,67 +654,72 @@ header span {
 }
 
 /* ===== Responsive Scaling ===== */
-/* ===== Fix Uneven Right Spacing in Phone View ===== */
-@media (max-width: 600px) {
-    /* Equal left & right padding for all sections */
-    header,
-    .wrapper,
-    .section-prod,
-    .product-info-section,
-    .suggested-products,
-    .faq-section-container,
-    .contact-cta-section,
-    .bottom_tags_sec {
-        padding-left: 12px;
-        padding-right: 12px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        box-sizing: border-box;
-        overflow-x: hidden; /* prevents small right gap caused by scrollbars or transforms */
-    }
 
-    /* Ensure no section adds extra side margin internally */
-    * {
-        margin-right: 0;
-        margin-left: 0;
-    }
 
-    /* Images & grids fit properly within mobile width */
-    img,
-    .main-prod-img,
-    .row-thumbs,
-    .contact-cta-image img {
-        max-width: 90%;
-        width: 100%;
-        object-fit: contain;
-    }
-    .row-thumbs-img{
-      width:100%;
-      height:50px;
-    }
+@media (max-width: 400px) {
+  /* You Might Like section - show 3 products on screen */
+  .product-list {
+    gap: 10px;
+    padding: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
 
-    /* Prevent right gap from flex/grid behavior */
-    body {
-        overflow-x: hidden;
-    }
+  .product-card {
+    flex: 0 0 calc(100% / 3 - 12px); /* Fit 3 cards in one view */
+    width: calc(100% / 3 - 12px);
+    padding: 10px;
+    grid-template-rows: 120px 40px 40px;
+    scroll-snap-align: start;
+  }
+
+  .product-card img {
+    height: 100px;
+  }
+
+  .product-card h3 {
+    font-size: 0.75rem;
+    max-height: 2.4em;
+  }
+
+  .product-card p {
+    font-size: 0.7rem;
+  }
+
+  /* Optional: reduce header padding */
+  header {
+    padding: 8px 0;
+  }
+
+  /* Optional: thumbnail spacing */
+  .row-thumbs {
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Optional: Accordion padding tweaks */
+  .accordion-title {
+    font-size: 1rem;
+  }
+
+  .desc-sec h2,
+  .product-info-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-cart,
+  .btn-buy {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .row-action {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .input-qty {
+    width: 50px;
+    font-size: 0.9rem;
+  }
 }
-@media (max-width: 360px) {
-    header,
-    .wrapper,
-    .section-prod,
-    .product-info-section,
-    .suggested-products,
-    .faq-section-container,
-    .contact-cta-section,
-    .bottom_tags_sec {
-        padding-left: 10px;
-        padding-right: 10px;
-        justify-content: center;
-        
-    }.thumb-img {
-        width: 60px; /* slightly smaller for tiny screens */
-        height: 70px;
-    }
-}
-
