@@ -47,34 +47,37 @@ body {
 }
 
 /* Equal size grid */
+/* Compact Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto auto;
-  gap: 65px;
+  grid-auto-rows: minmax(220px, auto); /* shorter row height */
+  gap: 45px; /* less space between cards */
   width: 100%;
-  max-width: 1300px;
-  padding-top: 3%;
+  max-width: 1200px; /* slightly smaller overall grid */
+  padding-top: 1%;
 }
 
-/* Product card */
+/* ===== Compact Product Card ===== */
 .product-cards {
-    display: grid;
-  grid-template-rows: auto auto auto;
+  display: grid;
+  grid-template-rows: auto auto; /* image + details */
   text-align: center;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
-}
-.product-cards:hover {
-  transform: translateY(-5px);
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px; /* reduced padding */
+  border: 0.5px solid #000; /* <-- Added black border */
 }
 
-/* Image box with fixed ratio */
+
+/* ===== Image Box ===== */
 .image-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1.1; 
+  aspect-ratio: 1 / 0.75; /* shorter height for compact look */
   background: #f9f9f9;
   overflow: hidden;
   border-radius: 10px;
@@ -87,6 +90,7 @@ body {
   display: none;
   transition: opacity 0.4s ease;
 }
+
 
 .image-box img.active {
   display: block;
@@ -139,14 +143,25 @@ body {
 }
 
 /* Details section */
+/* ===== Details Section ===== */
 .details {
-  margin-top: 12px;
+  margin-top: 8px; /* less space above details */
   display: grid;
   grid-template-rows: auto auto auto auto;
-  padding: 15px;
-  
-  /* border-left: 1px solid black;
-  border-: 1px solid black; */
+  padding: 8px; /* reduced padding */
+  gap: 4px; /* spacing between texts/buttons */
+}
+
+.details h3,
+.details h4,
+.details p {
+  font-size: 12px; /* smaller font size */
+  margin: 2px 0;
+}
+
+.details button {
+  font-size: 10px; /* smaller button */
+  padding: 4px 10px; 
 }
 
 
@@ -296,5 +311,118 @@ body {
    /* background-color: rgb(255, 212, 212); */
    justify-items: center;
 
+  }
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1299px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(160px, auto);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(140px, auto);
+    gap: 15px;
+  }
+  .image-box {
+    aspect-ratio: 1 / 0.75; /* even shorter on phone */
+  }
+}
+
+/* Very Small Screens (~360px) */
+@media (max-width: 380px) {
+  /* Container spacing */
+  .container {
+    padding: 8px; /* equal left & right spacing */
+  }
+
+  /* Product grid: 2 items per row for compact look */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 products per row */
+    grid-auto-rows: minmax(120px, auto);
+    gap: 20px; /* small gap between products */
+    width: 100%;
+  }
+
+  /* Product card adjustments */
+  .product-cards {
+    width: 100%;
+    padding: 3px; /* smaller padding inside card */
+    margin: 0 auto;
+    
+  }
+
+  /* Image box */
+  .image-box {
+    aspect-ratio: 1 / 0.7; /* slightly taller for visibility */
+  }
+
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Details section */
+  .details {
+    padding: 4px; 
+    gap: 3px;
+  }
+
+  .details h3,
+  .details h4,
+  .details p {
+    font-size: 10px; 
+    margin: 1px 0;
+  }
+
+  .details button {
+    font-size: 9px; 
+    padding: 3px 6px;
+  }
+
+  /* Header adjustments */
+  header {
+    padding: 8px; /* match container side spacing */
+    text-align: center;
+  }
+
+  .header_text {
+    font-size: 16px; 
+    top: 0;
+  }
+
+  /* Wishlist icon */
+  .wishlist {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  /* Next button */
+  .next-btn {
+    font-size: 14px;
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Popup adjustments */
+  .popup {
+    width: 95%;
+    padding: 15px;
   }
 }
